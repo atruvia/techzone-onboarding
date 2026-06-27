@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat-Sheet: /atruvia-teach · BMAD-Onboarding</title>
+  <meta name="description" content="Schnellreferenz zum KI-Tutor /atruvia-teach: die Workspace-Dateien, die Lern-Begriffe und der Einstieg.">
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="reference">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Nachschlagewerk · Lernen mit dem KI-Tutor</p>
+      <h1 class="atr-hero">Cheat-Sheet: /atruvia-teach</h1>
+      <p class="lesson__lead">
+        Die kompakte Essenz der drei Lektionen – zum Nachschlagen und Ausdrucken. Quelle ist
+        der Tutor selbst.
+      </p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>So startest du</h2>
+      <ul class="objectives">
+        <li>Session beginnen: <code>/atruvia-teach &lt;Thema&gt;</code> im gewünschten Ordner.</li>
+        <li>Ist die Mission unklar, fragt der Tutor zuerst nach dem Warum.</li>
+        <li>Der Agent ist deine Lehrkraft – frag jederzeit nach, bis es sitzt.</li>
+      </ul>
+
+      <h2>Die Workspace-Dateien</h2>
+      <table class="cheat-table">
+        <caption>Hier lebt dein Lernstand</caption>
+        <thead>
+          <tr><th scope="col">Datei</th><th scope="col">Wofür</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>MISSION.md</code></td><td>Der Grund, warum du lernst – erdet jede Lektion.</td></tr>
+          <tr><td><code>lessons/*.html</code></td><td>Hauptlerneinheit: je eine eng umrissene Sache, schnell abschließbar.</td></tr>
+          <tr><td><code>reference/*.html</code></td><td>Verdichtete Cheat-Sheets und Glossare zum Wiederkommen.</td></tr>
+          <tr><td><code>learning-records/*.md</code></td><td>Was du gelernt hast – steuert die nächsten Sessions.</td></tr>
+          <tr><td><code>RESOURCES.md</code></td><td>Vertrauenswürdige Quellen (Wissen) und Communities (Weisheit).</td></tr>
+          <tr><td><code>NOTES.md</code></td><td>Deine Vorlieben und Arbeitsnotizen.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Lern-Begriffe</h2>
+      <ul class="objectives">
+        <li><strong>Fluency vs Storage Strength</strong> – Abruf im Moment gegenüber langfristigem Behalten. Ziel ist Storage Strength.</li>
+        <li><strong>Wünschenswerte Schwierigkeit</strong> – Abrufübung, Verteilung und Verschränkung bauen Behalten auf.</li>
+        <li><strong>Zone der proximalen Entwicklung</strong> – immer »genau richtig« gefordert, nie über- oder unterfordert.</li>
+        <li><strong>Wissen · Fertigkeiten · Weisheit</strong> – die drei Säulen tiefen Lernens.</li>
+      </ul>
+
+      <div class="callout">
+        <p class="callout__label">Gut zu wissen</p>
+        <p>
+          Dieser Lernbereich ist selbst eine eingefrorene teach-Session. Öffne den Ordner in
+          deiner Claude CLI, und der Tutor macht live weiter.
+        </p>
+      </div>
+
+      <svg class="via-line" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet Wissen und Können">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="66" y="55" font-size="15">Wissen</text>
+          <text x="528" y="55" font-size="15">Können</text>
+        </g>
+      </svg>
+
+      <h2>Quellen</h2>
+      <p>Dieser Lernbereich ist selbst die Demonstration. Die maßgebliche Quelle ist das
+        <code>atruvia-teach</code>-Skill in deiner Claude CLI:</p>
+      <ul class="source-list">
+        <li><code>SKILL.md</code> – Philosophie, Lektionen, Wissen/Fertigkeiten/Weisheit, Fluency vs Storage Strength.</li>
+        <li><code>MISSION-FORMAT.md</code> – wie eine gute Mission aussieht.</li>
+        <li><code>LEARNING-RECORD-FORMAT.md</code> – wie Lernaufzeichnungen die nächsten Sessions steuern.</li>
+        <li><code>RESOURCES-FORMAT.md</code> · <code>GLOSSARY-FORMAT.md</code> – Quellen kuratieren und Begriffe schärfen.</li>
+      </ul>
+
+      <nav class="lesson__nav">
+        <a href="../index.html">‹ Alle Lektionen</a>
+        <a href="../lessons/0001-was-ist-der-ki-tutor.html">Bei Lektion 1 beginnen ›</a>
+      </nav>
+
+      <p class="lesson__brand">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+        <span>Gestaltet im Atruvia Design System · Dieser Lernbereich ist selbst eine teach-Session</span>
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

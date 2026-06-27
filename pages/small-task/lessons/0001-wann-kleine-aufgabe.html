@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 — Wann ist es eine kleine Aufgabe? · BMAD-Onboarding</title>
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Mission · Wann es klein bleibt</p>
+      <h1 class="atr-hero">Wann ist es eine kleine Aufgabe?</h1>
+      <p class="lesson__lead">
+        Nicht jede Änderung braucht den vollen BMAD-Durchlauf. Nach dieser Lektion erkennst
+        du, wann dein Scope klein und klar genug für den Schnellpfad ist – und wann du
+        besser den vollen Weg nimmst.
+      </p>
+      <p class="lesson__meta">Lektion 01 · ca. 5 Minuten · Wissen</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Das kannst du danach</h2>
+      <ul class="objectives">
+        <li>Die vier BMAD-Phasen benennen und den parallelen quick-dev-Track verorten.</li>
+        <li>Für eine konkrete Änderung entscheiden: Schnellpfad oder voller Durchlauf?</li>
+      </ul>
+
+      <h2>Worum es geht</h2>
+      <p>
+        BMAD gliedert die Arbeit in vier aufeinander folgende Phasen: <strong>Analyse,
+        Planung, Solutioning, Umsetzung</strong>. Jede Phase erzeugt Artefakte, die in die
+        nächste fließen<span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+        Für eine kleine, klar umrissene Änderung gibt es daneben einen parallelen Track:
+        <code>bmad-quick-dev</code> überspringt die Phasen 1–3 und ist genau für solche
+        überschaubaren Arbeiten gedacht<span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+      </p>
+      <p>
+        Die Faustregel steht in der Doku: Kleine Änderungen ohne weiten Wirkungsradius
+        können direkt in die Umsetzung gehen. Alles andere läuft durch die Planung, damit
+        das Modell eine klarere Grenze hat, bevor es länger eigenständig arbeitet<span class="cite"> (<a href="https://docs.bmad-method.org/explanation/quick-dev/">BMAD-Doku: Quick Dev</a>)</span>.
+      </p>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          Klein und klar heißt: Du kannst das Ziel in einem Satz sagen, und die Änderung
+          streut nicht in den übrigen Code. Trifft das nicht zu, gibt dir der volle
+          Durchlauf die Grenze, die ein langer Lauf braucht.
+        </p>
+      </div>
+
+      <p>
+        Du musst die Einordnung nicht raten: <code>bmad-help</code> prüft deinen
+        Projektstand und empfiehlt den nächsten Schritt – du kannst auch in eigenen Worten
+        fragen, etwa <code>bmad-help ich will nur ein Label umbenennen, wo fange ich an?</code><span class="cite"> (<a href="https://docs.bmad-method.org/tutorials/getting-started/">BMAD-Doku: Getting Started</a>)</span>.
+      </p>
+
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet die Aufgabe mit der Umsetzung">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="66" y="55" font-size="15">Aufgabe</text>
+          <text x="520" y="55" font-size="15">Umsetzung</text>
+        </g>
+      </svg>
+
+      <h2>Jetzt du</h2>
+      <p>Prüfe dich selbst – Abrufen aus dem Gedächtnis baut echtes Behalten auf.</p>
+
+      <div class="quiz">
+        <p class="quiz__label">Wissens-Check</p>
+        <p class="quiz__q">Welche Änderung passt direkt in die Umsetzung?</p>
+        <div class="quiz__options">
+          <button class="quiz__option" data-correct="true">Eine kleine Änderung ohne Radius im übrigen Code.</button>
+          <button class="quiz__option">Ein neues Produkt mit noch sehr unklarem Ziel.</button>
+          <button class="quiz__option">Ein Umbau, der viele Module auf einmal berührt.</button>
+        </div>
+        <p class="quiz__feedback" hidden>
+          Richtig ist die erste Option. Kleine Änderungen ohne weiten Wirkungsradius gehen
+          über <code>bmad-quick-dev</code> direkt in die Umsetzung. Ein unklares Ziel oder
+          ein breiter Umbau sprechen dagegen <em>für</em> den vollen Durchlauf.
+        </p>
+      </div>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Lies als Nächstes:
+          <a href="https://docs.bmad-method.org/explanation/quick-dev/">»Quick Dev« (BMAD-Doku)</a> –
+          die Routing-Regel, wann eine Änderung direkt in die Umsetzung geht.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="../assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Frag einfach nach – wir gehen jeden Schritt gemeinsam durch, bis es sitzt.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <nav class="lesson__nav">
+      <a href="../index.html">‹ Alle Lektionen</a>
+      <a href="../reference/index.html">Cheat-Sheet</a>
+      <a href="0002-schnellpfad-quick-dev.html">Nächste Lektion ›</a>
+    </nav>
+
+    <p class="lesson__brand">
+      <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+    </p>
+
+  </main>
+
+  <script src="../assets/design-system/quiz.js"></script>
+</body>
+</html>

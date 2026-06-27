@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03 — Review im Kleinen · BMAD-Onboarding</title>
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Mission · Du hast das letzte Wort</p>
+      <h1 class="atr-hero">Review im Kleinen</h1>
+      <p class="lesson__lead">
+        Auch eine kleine Änderung ist erst fertig, wenn du sie geprüft hast. Nach dieser
+        Lektion weißt du, warum du den letzten Kontrollpunkt besitzt – und wer der Dev-Agent
+        Amelia dabei ist.
+      </p>
+      <p class="lesson__meta">Lektion 03 · ca. 6 Minuten · Wissen</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Das kannst du danach</h2>
+      <ul class="objectives">
+        <li>Erklären, warum die Änderung erst nach deiner Review fertig ist.</li>
+        <li>Den Dev-Agenten Amelia (<code>bmad-agent-dev</code>) einordnen.</li>
+      </ul>
+
+      <h2>Wer setzt um?</h2>
+      <p>
+        BMAD-Agenten haben Namen. Die Dev-Rolle ist der Agent <code>bmad-agent-dev</code>
+        mit der Persona <strong>Amelia</strong><span class="cite"> (<a href="https://docs.bmad-method.org/explanation/named-agents/">BMAD-Doku: Named Agents</a>)</span>.
+        Sie schreibt den Code – aber sie entscheidet nicht, ob er gut genug ist. Genau dafür
+        bleibt der letzte Kontrollpunkt bei dir<span class="cite"> (<a href="https://docs.bmad-method.org/explanation/quick-dev/">BMAD-Doku: Quick Dev</a>)</span>.
+      </p>
+
+      <h2>Review, bevor es fertig ist</h2>
+      <p>
+        Im vollen Durchlauf prüft <code>bmad-code-review</code> die Umsetzung, bevor sie als
+        fertig gilt; der Zyklus umfasst außerdem <code>bmad-sprint-planning</code>,
+        <code>bmad-create-story</code>, <code>bmad-dev-story</code> und
+        <code>bmad-retrospective</code><span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+        Im Schnellpfad fällt vieles davon weg – die Review aber nicht: Sie ist der primäre
+        Kontrollpunkt, an dem du über das Ergebnis entscheidest<span class="cite"> (<a href="https://docs.bmad-method.org/explanation/quick-dev/">BMAD-Doku: Quick Dev</a>)</span>.
+      </p>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          Grüne Tests und fertiger Code sind nicht das Ziel – deine Zustimmung ist es. Erst
+          nach deiner Review gilt die Änderung als fertig.
+        </p>
+      </div>
+
+      <!-- VIA line: Code verbunden mit der Freigabe -->
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet den Code mit der Freigabe">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="72" y="55" font-size="15">Code</text>
+          <text x="522" y="55" font-size="15">Freigabe</text>
+        </g>
+      </svg>
+
+      <h2>Jetzt du</h2>
+      <p>Eine Frage, die den Kern festhält – aus dem Gedächtnis beantworten.</p>
+
+      <div class="quiz">
+        <p class="quiz__label">Wissens-Check</p>
+        <p class="quiz__q">Wann gilt deine Änderung als fertig?</p>
+        <div class="quiz__options">
+          <button class="quiz__option" data-correct="true">Erst nach deiner Review des Ergebnisses.</button>
+          <button class="quiz__option">Sobald der Dev-Agent den Code erzeugt.</button>
+          <button class="quiz__option">Sobald die Tests einmal grün werden.</button>
+        </div>
+        <p class="quiz__feedback" hidden>
+          Richtig ist die erste Option. Die Review ist der primäre Kontrollpunkt: Erst deine
+          Zustimmung macht die Änderung fertig. Fertiger Code von Amelia oder grüne Tests
+          sind dafür nur Vorstufen.
+        </p>
+      </div>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Lies als Nächstes:
+          <a href="https://docs.bmad-method.org/explanation/named-agents/">»Named Agents« (BMAD-Doku)</a> –
+          wer Amelia, der Dev-Agent, ist und wie du sie ansprichst.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="../assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Frag einfach nach – wir gehen jeden Schritt gemeinsam durch, bis es sitzt.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <nav class="lesson__nav">
+      <a href="0002-schnellpfad-quick-dev.html">‹ Vorherige Lektion</a>
+      <a href="../reference/index.html">Cheat-Sheet</a>
+      <a href="../index.html">Alle Lektionen ›</a>
+    </nav>
+
+    <p class="lesson__brand">
+      <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+    </p>
+
+  </main>
+
+  <script src="../assets/design-system/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat-Sheet: Rollen &amp; Artefakte · BMAD-Onboarding</title>
+  <meta name="description" content="Schnellreferenz zum vollen BMAD-Lebenszyklus: die vier Phasen mit Rolle, bmad-*-Workflow und Artefakt – von der Analyse über Planung und Solutioning bis zur Umsetzung.">
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="reference">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Nachschlagewerk · Kleines Projekt</p>
+      <h1 class="atr-hero">Cheat-Sheet: Rollen &amp; Artefakte</h1>
+      <p class="lesson__lead">
+        Die kompakte Essenz der drei Lektionen – zum Nachschlagen und Ausdrucken. Alle
+        Phasen, Rollen, Befehle und Artefakte stammen aus der öffentlichen BMAD-METHOD.
+      </p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Die vier Phasen</h2>
+      <p>
+        <strong>Analyse, Planung, Solutioning, Umsetzung.</strong> Jede Phase erzeugt
+        Artefakte, die in die nächste fließen. Die Analyse ist optional; Planung, Solutioning
+        und Umsetzung bilden das Rückgrat deines kleinen Projekts.
+      </p>
+
+      <h2>Wer &amp; wie du startest</h2>
+      <ul class="objectives">
+        <li>Die Agenten sind benannt – ein »hey Mary« aktiviert immer die Analystin, unabhängig von jeder Anpassung.</li>
+        <li><code>bmad-help</code> – prüft den Projektstand und empfiehlt den nächsten Schritt. Du kannst in eigenen Worten fragen.</li>
+        <li>Dein KI-Werkzeug erkennt jeden <code>bmad-*</code>-Namen und führt ihn aus – kein separates Laden nötig.</li>
+      </ul>
+
+      <h2>Phase, Rolle, Workflow, Artefakt</h2>
+      <table class="cheat-table">
+        <caption>Der volle Lebenszyklus – die Analyse ist optional, der Rest ist das Rückgrat</caption>
+        <thead>
+          <tr><th scope="col">Phase</th><th scope="col">Rolle/Agent</th><th scope="col">Workflow</th><th scope="col">Artefakt</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Analyse <em>(optional)</em></td>
+            <td>Analystin Mary</td>
+            <td><code>bmad-brainstorming</code><br><code>bmad-product-brief</code></td>
+            <td><code>brief.md</code></td>
+          </tr>
+          <tr>
+            <td>Planung</td>
+            <td>PM John (<code>bmad-agent-pm</code>)<br>UX Sally</td>
+            <td><code>bmad-prd</code><br><code>bmad-ux</code></td>
+            <td><code>prd.md</code><br><code>DESIGN.md</code>, <code>EXPERIENCE.md</code></td>
+          </tr>
+          <tr>
+            <td>Solutioning</td>
+            <td>Architect Winston (<code>bmad-agent-architect</code>)</td>
+            <td><code>bmad-architecture</code><br><code>bmad-create-epics-and-stories</code><br><code>bmad-check-implementation-readiness</code></td>
+            <td><code>ARCHITECTURE-SPINE.md</code><br>Epics mit Stories<br>PASS/CONCERNS/FAIL</td>
+          </tr>
+          <tr>
+            <td>Umsetzung</td>
+            <td>Dev Amelia (<code>bmad-agent-dev</code>)<br>Scrum-Master-Rolle</td>
+            <td><code>bmad-sprint-planning</code><br><code>bmad-create-story</code><br><code>bmad-dev-story</code><br><code>bmad-code-review</code><br><code>bmad-retrospective</code></td>
+            <td>fertige Stories &amp; Code<br>Retrospektive nach dem Epic</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p class="callout__label">Der Story-Lebenszyklus</p>
+        <p>
+          In der Umsetzung läuft jede Story durch denselben Takt:
+          <code>bmad-create-story</code>, <code>bmad-dev-story</code>,
+          <code>bmad-code-review</code>. Eine Story ist vollständig fertig – inklusive
+          Review –, bevor die nächste beginnt. Die Retrospektive folgt erst, nachdem ein
+          Epic abgeschlossen ist.
+        </p>
+      </div>
+
+      <svg class="via-line" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet die Idee mit dem Release">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="70" y="55" font-size="15">Idee</text>
+          <text x="528" y="55" font-size="15">Release</text>
+        </g>
+      </svg>
+
+      <h2>Quellen</h2>
+      <ul class="source-list">
+        <li><a href="https://docs.bmad-method.org/reference/workflow-map/">Workflow-Map</a> – die vier Phasen mit ihren <code>bmad-*</code>-Workflows und Artefakten.</li>
+        <li><a href="https://docs.bmad-method.org/explanation/analysis-phase/">Analysis Phase: From Idea to Foundation</a> – warum die Analyse optional ist und wie sie das PRD füttert.</li>
+        <li><a href="https://docs.bmad-method.org/explanation/named-agents/">Named Agents</a> – Mary, John, Sally, Winston, Amelia und wie du sie ansprichst.</li>
+        <li><a href="https://docs.bmad-method.org/tutorials/getting-started/">Getting Started</a> – Einstieg mit <code>bmad-help</code>.</li>
+        <li><a href="https://github.com/bmad-code-org/BMAD-METHOD">BMAD-METHOD auf GitHub</a> – die Quelle der Wahrheit.</li>
+      </ul>
+
+      <nav class="lesson__nav">
+        <a href="../index.html">‹ Alle Lektionen</a>
+        <a href="../lessons/0001-lebenszyklus-ueberblick.html">Bei Lektion 1 beginnen ›</a>
+      </nav>
+
+      <p class="lesson__brand">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+        <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

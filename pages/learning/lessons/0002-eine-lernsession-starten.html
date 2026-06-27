@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 — Eine Lernsession starten · BMAD-Onboarding</title>
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Mission · Vom Start zum Workspace</p>
+      <h1 class="atr-hero">Eine Lernsession starten</h1>
+      <p class="lesson__lead">
+        Nach dieser Lektion startest du eine Session mit <code>/atruvia-teach &lt;Thema&gt;</code>
+        und weißt, welche Dateien deinen Fortschritt halten.
+      </p>
+      <p class="lesson__meta">Lektion 02 · ca. 6 Minuten · Wissen &amp; Übung</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Das kannst du danach</h2>
+      <ul class="objectives">
+        <li>Eine Lernsession mit <code>/atruvia-teach &lt;Thema&gt;</code> starten.</li>
+        <li>Die sechs Workspace-Dateien benennen und sagen, wofür sie da sind.</li>
+      </ul>
+
+      <h2>Den Start setzen</h2>
+      <p>
+        Du startest mit <code>/atruvia-teach &lt;Thema&gt;</code>. Ist deine Mission noch
+        unklar, fragt der Tutor zuerst nach – warum du das Thema lernen willst –, bevor er
+        loslegt<span class="cite"> (atruvia-teach · SKILL.md)</span>. Eine gute Mission ist
+        konkret: »Ein kleines Feature mit BMAD ausliefern« schlägt »BMAD verstehen«<span class="cite"> (atruvia-teach · MISSION-FORMAT.md)</span>.
+      </p>
+
+      <h2>Die Workspace-Dateien</h2>
+      <p>Dein Lernstand lebt in diesen Dateien<span class="cite"> (atruvia-teach · SKILL.md)</span>:</p>
+      <ul class="objectives">
+        <li><code>MISSION.md</code> – der Grund, warum du lernst; erdet jede Lektion.</li>
+        <li><code>lessons/*.html</code> – die Hauptlerneinheit: je eine eng umrissene Sache, schnell abschließbar.</li>
+        <li><code>reference/*.html</code> – verdichtete Cheat-Sheets und Glossare, zu denen du zurückkehrst.</li>
+        <li><code>learning-records/*.md</code> – was du gelernt hast; steuert die nächsten Sessions.</li>
+        <li><code>RESOURCES.md</code> – vertrauenswürdige Quellen (Wissen) und Communities (Weisheit).</li>
+        <li><code>NOTES.md</code> – deine Vorlieben und Arbeitsnotizen.</li>
+      </ul>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          Die Mission ist der Kompass. Jede Lektion, jede Quelle, jede Übung lässt sich auf
+          sie zurückführen – sonst bleibt Lernen abstrakt.
+        </p>
+      </div>
+
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet Thema und Workspace">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="66" y="55" font-size="15">Thema</text>
+          <text x="520" y="55" font-size="15">Workspace</text>
+        </g>
+      </svg>
+
+      <h2>Jetzt du</h2>
+      <p>Eine Frage zum Kern – aus dem Gedächtnis beantworten.</p>
+
+      <div class="quiz">
+        <p class="quiz__label">Wissens-Check</p>
+        <p class="quiz__q">Welche Datei hält fest, warum du etwas lernst?</p>
+        <div class="quiz__options">
+          <button class="quiz__option" data-correct="true">MISSION.md hält den Grund deines Lernens fest.</button>
+          <button class="quiz__option">RESOURCES.md hält den Grund deines Lernens fest.</button>
+          <button class="quiz__option">NOTES.md hält den Grund deines Lernens fest.</button>
+        </div>
+        <p class="quiz__feedback" hidden>
+          Richtig ist <code>MISSION.md</code> – sie erdet jede Lektion. <code>RESOURCES.md</code>
+          sammelt Quellen, <code>NOTES.md</code> deine Vorlieben.
+        </p>
+      </div>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Probier es selbst: Öffne diesen Ordner in deiner Claude CLI und starte mit
+          <code>/atruvia-teach &lt;Thema&gt;</code> – dann sieh dir die entstehenden Dateien an.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="../assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Frag einfach nach – der Tutor ist deine Lehrkraft und geht jeden Schritt mit dir durch.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <nav class="lesson__nav">
+      <a href="0001-was-ist-der-ki-tutor.html">‹ Vorherige Lektion</a>
+      <a href="../reference/index.html">Cheat-Sheet</a>
+      <a href="0003-wie-der-tutor-arbeitet.html">Nächste Lektion ›</a>
+    </nav>
+
+    <p class="lesson__brand">
+      <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Dieser Lernbereich ist selbst eine teach-Session</span>
+    </p>
+
+  </main>
+
+  <script src="../assets/design-system/quiz.js"></script>
+</body>
+</html>

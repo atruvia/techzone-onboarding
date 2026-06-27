@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone — BMAD-Onboarding · Atruvia</title>
+  <meta name="description" content="Onboarding für Atruvia-Entwickler*innen, die neu in der BMAD-METHOD sind: Finde den Workflow, der zu deiner Situation passt, und geh mit dem KI-Tutor in die Tiefe.">
+  <link rel="icon" href="assets/via-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/colors_and_type.css">
+  <link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+  <div class="hub">
+
+    <!-- TopNav -->
+    <nav class="hub-nav" aria-label="Hauptnavigation">
+      <a class="hub-nav__brand" href="index.html" aria-label="Atruvia – Startseite">
+        <img src="assets/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <span class="hub-nav__divider" aria-hidden="true"></span>
+      <span class="hub-nav__tag">TechZone</span>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hub-hero">
+      <p class="atr-eyebrow">Willkommen</p>
+      <h1 class="hub-hero__title">TechZone — BMAD-Onboarding</h1>
+      <p class="hub-hero__lead">Finde den BMAD-Workflow, der zu deiner Situation passt – und geh mit dem KI-Tutor bei jedem Thema in die Tiefe.</p>
+      <span class="hub-hero__via" aria-hidden="true">
+        <svg viewBox="0 0 600 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" role="presentation">
+          <path d="M4 40 C 60 40, 80 8, 140 8 L 220 8 C 260 8, 280 40, 320 40 C 360 40, 380 12, 440 12 L 500 12 L 540 40 C 560 50, 580 40, 596 40"></path>
+        </svg>
+      </span>
+    </header>
+
+    <!-- Choose: 2×2 card grid -->
+    <main class="hub-main">
+      <section class="hub-choose" aria-labelledby="choose-title">
+        <h2 id="choose-title" class="hub-choose__title">Wo stehst du gerade?</h2>
+        <p class="hub-choose__intro">Wähle die Situation, die am besten passt. Jede Kachel führt dich in einen eigenständigen Lernbereich mit kurzen Lektionen und einem Cheat-Sheet.</p>
+
+        <div class="hub-grid">
+
+          <a class="hub-card" href="pages/innovate/">
+            <span class="hub-card__icon"><i data-lucide="compass"></i></span>
+            <h3 class="hub-card__title">Erkunden &amp; Recherche</h3>
+            <p class="hub-card__desc">Du hast eine vage Idee und willst sie strukturiert erkunden – Brainstorming und Analyse am Anfang der BMAD-Methode.</p>
+            <span class="hub-card__more">Erkunden <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a class="hub-card" href="pages/small-task/">
+            <span class="hub-card__icon"><i data-lucide="wrench"></i></span>
+            <h3 class="hub-card__title">Kleine Aufgabe</h3>
+            <p class="hub-card__desc">Eine kleine, konkrete Änderung umsetzen – im kurzen Dev-Zyklus mit dem Dev-Agenten.</p>
+            <span class="hub-card__more">Loslegen <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a class="hub-card" href="pages/small-project/">
+            <span class="hub-card__icon"><i data-lucide="route"></i></span>
+            <h3 class="hub-card__title">Kleines Projekt</h3>
+            <p class="hub-card__desc">Ein vollständiges kleines Projekt von der Planung über die Umsetzung bis zur Retro – der ganze BMAD-Lebenszyklus.</p>
+            <span class="hub-card__more">Planen <i data-lucide="arrow-right"></i></span>
+          </a>
+
+          <a class="hub-card" href="pages/learning/">
+            <span class="hub-card__icon"><i data-lucide="graduation-cap"></i></span>
+            <h3 class="hub-card__title">Lernen mit dem KI-Tutor</h3>
+            <p class="hub-card__desc">Ein einzelnes Thema tief lernen – mit dem KI-Tutor <code>/atruvia-teach</code>.</p>
+            <span class="hub-card__more">Lernen <i data-lucide="arrow-right"></i></span>
+          </a>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="hub-footer">
+      <div class="hub-footer__inner">
+        <img class="hub-footer__logo" src="assets/atruvia-logo.svg" alt="Atruvia">
+        <p class="hub-footer__tag">Wir verbinden. Füreinander.</p>
+        <nav class="hub-footer__links" aria-label="Weiterführende Links">
+          <a href="https://github.com/bmad-code-org/BMAD-METHOD">BMAD-METHOD</a>
+          <a href="https://docs.bmad-method.org">BMAD-Dokumentation</a>
+          <a href="https://github.com/atruvia/techzone-onboarding">Quellcode</a>
+        </nav>
+      </div>
+      <div class="hub-footer__legal">
+        <span>© Atruvia AG</span>
+        <span>Statisch gehostet mit GitHub Pages</span>
+        <span>Inhalte basieren auf der öffentlichen BMAD-METHOD</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Lucide icons (Atruvia design system standardises on Lucide) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

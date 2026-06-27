@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03 — Wie der Tutor arbeitet · BMAD-Onboarding</title>
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Mission · Damit es wirklich sitzt</p>
+      <h1 class="atr-hero">Wie der Tutor arbeitet</h1>
+      <p class="lesson__lead">
+        Nach dieser Lektion erklärst du, wie der Tutor langfristiges Behalten aufbaut – und
+        welche Rolle deine Lernaufzeichnungen dabei spielen.
+      </p>
+      <p class="lesson__meta">Lektion 03 · ca. 5 Minuten · Wissen &amp; Übung</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Das kannst du danach</h2>
+      <ul class="objectives">
+        <li>Erklären, warum Abrufen aus dem Gedächtnis stärker wirkt als Wiederlesen.</li>
+        <li>Sagen, wie Lernaufzeichnungen die nächste Session steuern.</li>
+      </ul>
+
+      <h2>Flüssigkeit ist nicht Können</h2>
+      <p>
+        Der Tutor unterscheidet zwei Dinge: <strong>Fluency</strong> (Abruf im Moment) und
+        <strong>Storage Strength</strong> (langfristiges Behalten). Flüssigkeit täuscht leicht
+        Meisterschaft vor – das eigentliche Ziel ist Storage Strength<span class="cite"> (atruvia-teach · SKILL.md)</span>.
+      </p>
+
+      <h2>Wünschenswerte Schwierigkeit</h2>
+      <p>
+        Behalten wächst durch <strong>wünschenswerte Schwierigkeit</strong>: Abrufübung
+        (aus dem Gedächtnis abrufen), Verteilung (über die Zeit üben) und Verschränkung
+        (verwandte Themen mischen)<span class="cite"> (atruvia-teach · SKILL.md)</span>.
+        Deshalb hat jede Lektion hier einen kleinen Wissens-Check statt nur Text zum Lesen.
+      </p>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          Der Tutor fordert dich »genau richtig« – in deiner Zone der proximalen Entwicklung.
+          Er liest dafür deine <code>learning-records</code>, um zu entscheiden, was als
+          Nächstes dran ist<span class="cite"> (atruvia-teach · LEARNING-RECORD-FORMAT.md)</span>.
+        </p>
+      </div>
+
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet Üben und Behalten">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="66" y="55" font-size="15">Üben</text>
+          <text x="524" y="55" font-size="15">Behalten</text>
+        </g>
+      </svg>
+
+      <h2>Jetzt du</h2>
+      <p>Die letzte Frage – aus dem Gedächtnis.</p>
+
+      <div class="quiz">
+        <p class="quiz__label">Wissens-Check</p>
+        <p class="quiz__q">Was baut langfristiges Behalten am besten auf?</p>
+        <div class="quiz__options">
+          <button class="quiz__option" data-correct="true">Aus dem Gedächtnis abrufen, verteilt über die Zeit.</button>
+          <button class="quiz__option">Den Stoff mehrmals hintereinander erneut lesen.</button>
+          <button class="quiz__option">Alles in einer langen Sitzung am Stück lernen.</button>
+        </div>
+        <p class="quiz__feedback" hidden>
+          Richtig ist die erste Option. Abrufübung plus Verteilung baut Storage Strength auf.
+          Wiederlesen erzeugt nur Fluency, und Lernen am Stück widerspricht der Verteilung.
+        </p>
+      </div>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Setz es ein: Öffne diesen Ordner in deiner Claude CLI und führe deine Session mit
+          <code>/atruvia-teach</code> fort – der Tutor merkt sich, was sitzt, und fordert dich passend.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="../assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Frag einfach nach – der Tutor ist deine Lehrkraft und geht jeden Schritt mit dir durch.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <nav class="lesson__nav">
+      <a href="0002-eine-lernsession-starten.html">‹ Vorherige Lektion</a>
+      <a href="../reference/index.html">Cheat-Sheet</a>
+      <a href="../index.html">Alle Lektionen ›</a>
+    </nav>
+
+    <p class="lesson__brand">
+      <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Dieser Lernbereich ist selbst eine teach-Session</span>
+    </p>
+
+  </main>
+
+  <script src="../assets/design-system/quiz.js"></script>
+</body>
+</html>

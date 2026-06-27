@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kleine Aufgabe · BMAD-Onboarding</title>
+  <meta name="description" content="Eine kleine, konkrete Änderung in einem kurzen Dev-Zyklus: der Schnellpfad bmad-quick-dev, der die Phasen 1–3 überspringt, und seine drei Kontrollpunkte.">
+  <link rel="icon" href="assets/design-system/brand/via-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/design-system/lessons.css">
+  <link rel="stylesheet" href="assets/page.css">
+</head>
+<body>
+
+  <!-- Top bar: Atruvia logo + back to the Hub -->
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson landing">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Szenario · Kleine Aufgabe</p>
+      <h1 class="atr-hero">Kleine Aufgabe</h1>
+      <p class="lesson__lead">
+        Du hast eine kleine, klar umrissene Änderung und willst sie in einem kurzen
+        Dev-Zyklus umsetzen. Hier lernst du <strong>bmad-quick-dev</strong> kennen – den
+        Schnellpfad von BMAD, der dich vom Auftrag direkt zur fertigen Änderung bringt.
+      </p>
+      <p class="landing__meta">3 Lektionen · ca. 16 Minuten · plus Cheat-Sheet zum Nachschlagen</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Wann passt dieses Szenario?</h2>
+      <p>
+        BMAD gliedert die Arbeit in vier aufeinander folgende Phasen (Analyse, Planung,
+        Solutioning, Umsetzung)<span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+        Ist deine Änderung klein, klar umrissen und ohne weiten Wirkungsradius, brauchst du
+        diesen vollen Durchlauf nicht: <code>bmad-quick-dev</code> ist ein paralleler Track,
+        der die Phasen 1–3 überspringt und gerade für solche überschaubaren Arbeiten
+        gedacht ist<span class="cite"> (<a href="https://docs.bmad-method.org/explanation/quick-dev/">BMAD-Doku: Quick Dev</a>)</span>.
+      </p>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          »Kleine Änderungen ohne weiten Wirkungsradius können direkt in die Umsetzung
+          gehen. Alles andere läuft durch die Planung, damit das Modell eine klarere
+          Grenze hat, bevor es länger eigenständig arbeitet.«<span class="cite"> (<a href="https://docs.bmad-method.org/explanation/quick-dev/">BMAD-Doku: Quick Dev</a>)</span>
+        </p>
+      </div>
+
+      <!-- VIA line connects the two ends of this scenario -->
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet die kleine Aufgabe mit dem fertigen Commit">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="66" y="55" font-size="15">Aufgabe</text>
+          <text x="528" y="55" font-size="15">Commit</text>
+        </g>
+      </svg>
+
+      <h2>Die Lektionen</h2>
+      <ul class="lesson-list">
+
+        <li>
+          <a class="lesson-card" href="lessons/0001-wann-kleine-aufgabe.html">
+            <span class="lesson-card__num">1</span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Wann ist es eine kleine Aufgabe?</span>
+              <p class="lesson-card__desc">Den Scope einordnen und begründet entscheiden: direkt umsetzen oder doch den vollen Durchlauf nehmen?</p>
+              <p class="lesson-card__meta">ca. 5 Minuten · Wissen</p>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a class="lesson-card" href="lessons/0002-schnellpfad-quick-dev.html">
+            <span class="lesson-card__num">2</span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Der Schnellpfad: bmad-quick-dev</span>
+              <p class="lesson-card__desc">Intent rein, Code raus – und die drei Kontrollpunkte, an denen du als Mensch entscheidest.</p>
+              <p class="lesson-card__meta">ca. 6 Minuten · Wissen</p>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a class="lesson-card" href="lessons/0003-review-im-kleinen.html">
+            <span class="lesson-card__num">3</span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Review im Kleinen</span>
+              <p class="lesson-card__desc">Warum die Änderung erst nach deiner Review fertig ist – und wer der Dev-Agent Amelia ist.</p>
+              <p class="lesson-card__meta">ca. 6 Minuten · Wissen</p>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a class="lesson-card lesson-card--reference" href="reference/index.html">
+            <span class="lesson-card__num" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+            </span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Cheat-Sheet: Kleine Aufgabe</span>
+              <p class="lesson-card__desc">Alle relevanten <code>bmad-*</code>-Workflows, die drei Kontrollpunkte und der Dev-Agent – zum Nachschlagen und Ausdrucken.</p>
+              <p class="lesson-card__meta">Nachschlagewerk</p>
+            </span>
+          </a>
+        </li>
+
+      </ul>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Lies als Überblick:
+          <a href="https://docs.bmad-method.org/explanation/quick-dev/">»Quick Dev« (BMAD-Doku)</a>.
+          Die offizielle BMAD-METHOD ist die einzige Quelle der Wahrheit – wir zitieren sie in jeder Lektion.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Öffne diesen Ordner in deiner Claude CLI und frag nach – wir gehen jeden Schritt gemeinsam durch, bis es sitzt.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <p class="lesson__brand">
+      <img src="assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+    </p>
+
+  </main>
+
+</body>
+</html>

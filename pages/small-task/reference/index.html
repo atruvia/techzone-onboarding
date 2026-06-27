@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cheat-Sheet: Kleine Aufgabe · BMAD-Onboarding</title>
+  <meta name="description" content="Schnellreferenz zur kleinen Aufgabe in BMAD: der Schnellpfad bmad-quick-dev mit seinen drei Kontrollpunkten, die bmad-*-Workflows des vollen Zyklus und der Dev-Agent Amelia.">
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="reference">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Nachschlagewerk · Kleine Aufgabe</p>
+      <h1 class="atr-hero">Cheat-Sheet: Kleine Aufgabe</h1>
+      <p class="lesson__lead">
+        Die kompakte Essenz der drei Lektionen – zum Nachschlagen und Ausdrucken. Alle
+        Befehle und Kontrollpunkte stammen aus der öffentlichen BMAD-METHOD.
+      </p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Die vier Phasen und der Schnellpfad</h2>
+      <p>
+        <strong>Analyse, Planung, Solutioning, Umsetzung.</strong> Jede Phase erzeugt
+        Artefakte, die in die nächste fließen. Für eine kleine, klar umrissene Änderung
+        ohne weiten Wirkungsradius gibt es daneben einen parallelen Track:
+        <code>bmad-quick-dev</code> überspringt die Phasen 1–3 und führt direkt zur
+        Umsetzung.
+      </p>
+
+      <h2>Wie du startest</h2>
+      <ul class="objectives">
+        <li><code>bmad-quick-dev</code> – der Schnellpfad: Intent rein, Code-Änderungen raus, mit so wenigen Runden wie möglich.</li>
+        <li><code>bmad-help</code> – prüft den Projektstand und empfiehlt den nächsten Schritt. Du kannst in eigenen Worten fragen.</li>
+        <li>Dein KI-Werkzeug erkennt jeden <code>bmad-*</code>-Namen und führt ihn aus – kein separates Laden nötig.</li>
+      </ul>
+
+      <h2>Die drei Kontrollpunkte von quick-dev</h2>
+      <ul class="objectives">
+        <li><strong>Intent-Klärung</strong> – aus einer unsauberen Anfrage ein einziges, stimmiges Ziel machen.</li>
+        <li><strong>Spec-Freigabe</strong> – bestätigen, dass das eingefrorene Verständnis das Richtige ist.</li>
+        <li><strong>Review des Endergebnisses</strong> – der primäre Kontrollpunkt: Du entscheidest, ob das Ergebnis taugt.</li>
+      </ul>
+
+      <h2>Workflows des vollen Zyklus</h2>
+      <table class="cheat-table">
+        <caption>Wenn der Scope größer ist als quick-dev</caption>
+        <thead>
+          <tr><th scope="col">Workflow</th><th scope="col">Wofür</th><th scope="col">Ergebnis / Rolle</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>bmad-quick-dev</code></td>
+            <td>Kleine, klar umrissene Änderung ohne weiten Radius direkt umsetzen – überspringt die Phasen 1–3.</td>
+            <td>Code-Änderung mit drei Kontrollpunkten</td>
+          </tr>
+          <tr>
+            <td><code>bmad-sprint-planning</code></td>
+            <td>Den Backlog für einen Sprint ordnen und schneiden.</td>
+            <td>geplanter Sprint (Rolle: Scrum-Master)</td>
+          </tr>
+          <tr>
+            <td><code>bmad-create-story</code></td>
+            <td>Eine Anforderung in eine umsetzbare Story fassen.</td>
+            <td>Story (Rolle: Scrum-Master)</td>
+          </tr>
+          <tr>
+            <td><code>bmad-dev-story</code></td>
+            <td>Eine Story in Code umsetzen.</td>
+            <td>umgesetzte Story (Dev-Agent Amelia, <code>bmad-agent-dev</code>)</td>
+          </tr>
+          <tr>
+            <td><code>bmad-code-review</code></td>
+            <td>Die Umsetzung prüfen, bevor sie als fertig gilt.</td>
+            <td>Review-Ergebnis</td>
+          </tr>
+          <tr>
+            <td><code>bmad-retrospective</code></td>
+            <td>Den Sprint reflektieren und Verbesserungen festhalten.</td>
+            <td>Retrospektive-Notizen</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p class="callout__label">Routing-Regel</p>
+        <p>
+          Kleine Änderungen ohne weiten Wirkungsradius können direkt in die Umsetzung gehen.
+          Alles andere läuft durch die Planung, damit das Modell eine klarere Grenze hat,
+          bevor es länger eigenständig arbeitet.
+        </p>
+      </div>
+
+      <svg class="via-line" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet den Intent mit dem Code">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="68" y="55" font-size="15">Intent</text>
+          <text x="528" y="55" font-size="15">Code</text>
+        </g>
+      </svg>
+
+      <h2>Quellen</h2>
+      <ul class="source-list">
+        <li><a href="https://docs.bmad-method.org/explanation/quick-dev/">Quick Dev</a> – der Schnellpfad, sein Ziel und die drei Kontrollpunkte.</li>
+        <li><a href="https://docs.bmad-method.org/reference/workflow-map/">Workflow-Map</a> – die vier Phasen, der parallele quick-dev-Track und die <code>bmad-*</code>-Workflows.</li>
+        <li><a href="https://docs.bmad-method.org/explanation/named-agents/">Named Agents</a> – die benannten Agenten, u. a. Amelia (<code>bmad-agent-dev</code>).</li>
+        <li><a href="https://docs.bmad-method.org/tutorials/getting-started/">Getting Started</a> – Einstieg mit <code>bmad-help</code>.</li>
+        <li><a href="https://github.com/bmad-code-org/BMAD-METHOD">BMAD-METHOD auf GitHub</a> – die Quelle der Wahrheit.</li>
+      </ul>
+
+      <nav class="lesson__nav">
+        <a href="../index.html">‹ Alle Lektionen</a>
+        <a href="../lessons/0001-wann-kleine-aufgabe.html">Bei Lektion 1 beginnen ›</a>
+      </nav>
+
+      <p class="lesson__brand">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+        <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

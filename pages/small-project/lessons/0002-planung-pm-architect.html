@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 — Planung: PM und Architect · BMAD-Onboarding</title>
+  <link rel="stylesheet" href="../assets/design-system/lessons.css">
+  <link rel="stylesheet" href="../assets/page.css">
+</head>
+<body>
+
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Mission · Von der Anforderung zur Architektur</p>
+      <h1 class="atr-hero">Planung: PM und Architect</h1>
+      <p class="lesson__lead">
+        Zwei Phasen, zwei Rollen: In der Planung schreibt die PM-Rolle das PRD, im
+        Solutioning entwirft der Architect das Rückgrat. Nach dieser Lektion weißt du,
+        wer welches Artefakt verantwortet und welcher Check den Übergang freigibt.
+      </p>
+      <p class="lesson__meta">Lektion 02 · ca. 6 Minuten · Wissen &amp; Übung</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Das kannst du danach</h2>
+      <ul class="objectives">
+        <li>PRD, Architektur und Epics mit Stories ihren Workflows und Rollen zuordnen.</li>
+        <li>Den Readiness-Check und seine drei möglichen Ergebnisse benennen.</li>
+      </ul>
+
+      <h2>Phase 2: Planung</h2>
+      <p>
+        In der Planung erzeugt der Workflow <code>bmad-prd</code> das PRD (<code>prd.md</code>).
+        Verantwortlich ist die PM-Rolle, Persona <strong>John</strong>, Agent
+        <code>bmad-agent-pm</code><span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+        Die optionale Analyse liefert dafür die Vorarbeit: Brief, Brainstorming und Research
+        fließen als Eingabe in das PRD<span class="cite"> (<a href="https://docs.bmad-method.org/explanation/analysis-phase/">BMAD-Doku: Analysephase</a>)</span>.
+        Die UX-Seite gestaltet <code>bmad-ux</code> mit der Persona <strong>Sally</strong>
+        und erzeugt UX-Dokumente wie <code>DESIGN.md</code> und <code>EXPERIENCE.md</code><span class="cite"> (<a href="https://docs.bmad-method.org/explanation/named-agents/">BMAD-Doku: Named Agents</a>)</span>.
+      </p>
+
+      <h2>Phase 3: Solutioning</h2>
+      <p>
+        Auf dem fertigen PRD baut das Solutioning auf. <code>bmad-architecture</code> erzeugt
+        die Architektur (<code>ARCHITECTURE-SPINE.md</code>); verantwortlich ist der Architect,
+        Persona <strong>Winston</strong>, Agent <code>bmad-agent-architect</code>. Danach
+        zerlegt <code>bmad-create-epics-and-stories</code> das Vorhaben in Epics mit Stories<span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+      </p>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          Vor der Umsetzung steht ein Tor: <code>bmad-check-implementation-readiness</code>
+          prüft, ob alles bereit ist, und liefert eine klare Entscheidung –
+          <strong>PASS</strong>, <strong>CONCERNS</strong> oder <strong>FAIL</strong><span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+        </p>
+      </div>
+
+      <p>
+        Du musst dir die Reihenfolge nicht merken: <code>bmad-help</code> prüft deinen
+        Projektstand und empfiehlt den nächsten Schritt<span class="cite"> (<a href="https://docs.bmad-method.org/tutorials/getting-started/">BMAD-Doku: Getting Started</a>)</span>.
+      </p>
+
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet das PRD mit der Architektur">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="80" y="55" font-size="15">PRD</text>
+          <text x="520" y="55" font-size="15">Architektur</text>
+        </g>
+      </svg>
+
+      <h2>Jetzt du</h2>
+      <p>Prüfe dich selbst – Abrufen aus dem Gedächtnis baut echtes Behalten auf.</p>
+
+      <div class="quiz">
+        <p class="quiz__label">Wissens-Check</p>
+        <p class="quiz__q">Wer verantwortet das PRD?</p>
+        <div class="quiz__options">
+          <button class="quiz__option" data-correct="true">Die PM-Rolle, Persona John (bmad-prd).</button>
+          <button class="quiz__option">Der Architect, Persona Winston (bmad-arch).</button>
+          <button class="quiz__option">Die Dev-Rolle, Persona Amelia (bmad-dev).</button>
+        </div>
+        <p class="quiz__feedback" hidden>
+          Richtig ist die erste Option. Das PRD entsteht mit <code>bmad-prd</code> und wird
+          von der PM-Rolle (Persona John) verantwortet. Winston entwirft danach die
+          Architektur, Amelia setzt später die Stories um.
+        </p>
+      </div>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Lies als Nächstes:
+          <a href="https://docs.bmad-method.org/explanation/named-agents/">»Named Agents« (BMAD-Doku)</a>.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="../assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Frag einfach nach – wir gehen jeden Schritt gemeinsam durch, bis es sitzt.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <nav class="lesson__nav">
+      <a href="0001-lebenszyklus-ueberblick.html">‹ Vorherige Lektion</a>
+      <a href="../reference/index.html">Cheat-Sheet</a>
+      <a href="0003-umsetzung-und-retro.html">Nächste Lektion ›</a>
+    </nav>
+
+    <p class="lesson__brand">
+      <img src="../assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+    </p>
+
+  </main>
+
+  <script src="../assets/design-system/quiz.js"></script>
+</body>
+</html>

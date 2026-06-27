@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kleines Projekt · BMAD-Onboarding</title>
+  <meta name="description" content="Ein ganzes kleines Projekt mit BMAD durch den vollen Lebenszyklus führen: Planung mit PM und Architect, Umsetzung Story für Story und die Retrospektive am Ende.">
+  <link rel="icon" href="assets/design-system/brand/via-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/design-system/lessons.css">
+  <link rel="stylesheet" href="assets/page.css">
+</head>
+<body>
+
+  <!-- Top bar: Atruvia logo + back to the Hub -->
+  <header class="page-top">
+    <div class="page-top__inner">
+      <a class="page-top__brand" href="../../index.html" aria-label="Atruvia – zur Übersicht">
+        <img src="assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      </a>
+      <a class="page-top__back" href="../../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+        Zurück zur Übersicht
+      </a>
+    </div>
+  </header>
+
+  <main class="lesson landing">
+
+    <header class="lesson__header">
+      <p class="lesson__eyebrow">Szenario · Kleines Projekt</p>
+      <h1 class="atr-hero">Kleines Projekt</h1>
+      <p class="lesson__lead">
+        Du nimmst ein ganzes kleines Projekt und führst es mit BMAD durch den
+        <strong>vollen Lebenszyklus</strong> – von der Planung über die Umsetzung Story für
+        Story bis zur Retrospektive. Hier lernst du, wer welche Phase verantwortet und welche
+        Artefakte dabei entstehen.
+      </p>
+      <p class="landing__meta">3 Lektionen · ca. 18 Minuten · plus Cheat-Sheet zum Nachschlagen</p>
+    </header>
+
+    <section class="lesson__body">
+
+      <h2>Wann passt dieses Szenario?</h2>
+      <p>
+        Dieses Szenario passt, wenn du ein <strong>abgeschlossenes Stück Arbeit</strong>
+        umsetzt – kein Einzeiler, sondern ein kleines Vorhaben mit Anforderungen, Architektur
+        und mehreren Stories. Dann durchläufst du das volle BMAD-Rückgrat aus vier Phasen:
+        Analyse, Planung, Solutioning, Umsetzung<span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>.
+        Jede Phase erzeugt Artefakte, die in die nächste fließen.
+      </p>
+
+      <div class="callout">
+        <p class="callout__label">Kerngedanke</p>
+        <p>
+          »Ein kleines Projekt ist groß genug, dass sich Struktur lohnt: Die Analyse ist
+          optional, doch Planung, Solutioning und Umsetzung bilden das Rückgrat, an dem jede
+          Story entlangläuft.«<span class="cite"> (<a href="https://docs.bmad-method.org/reference/workflow-map/">BMAD-Doku: Workflow-Map</a>)</span>
+        </p>
+      </div>
+
+      <!-- VIA line connects the two ends of this scenario -->
+      <svg class="via-line via-line--draw" viewBox="0 0 600 100" preserveAspectRatio="xMidYMid meet"
+           role="img" aria-label="Die VIA-Linie verbindet die Idee mit dem Release">
+        <g fill="none" stroke="#fd5f4c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 120 50 L 140 50 L 140 22 L 220 22 L 250 50 L 320 50 Q 360 50 360 70 Q 360 90 380 90 Q 400 90 400 70 Q 400 50 380 50 L 470 50"/>
+        </g>
+        <g fill="#000064" text-anchor="middle" font-family="'Atruvia', 'Manrope', sans-serif" font-weight="700">
+          <text x="70" y="55" font-size="15">Idee</text>
+          <text x="528" y="55" font-size="15">Release</text>
+        </g>
+      </svg>
+
+      <h2>Die Lektionen</h2>
+      <ul class="lesson-list">
+
+        <li>
+          <a class="lesson-card" href="lessons/0001-lebenszyklus-ueberblick.html">
+            <span class="lesson-card__num">1</span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Der volle BMAD-Lebenszyklus im Überblick</span>
+              <p class="lesson-card__desc">Die vier Phasen einordnen und verstehen, welche Rolle und Persona jede davon antreibt.</p>
+              <p class="lesson-card__meta">ca. 5 Minuten · Wissen</p>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a class="lesson-card" href="lessons/0002-planung-pm-architect.html">
+            <span class="lesson-card__num">2</span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Planung: PM und Architect</span>
+              <p class="lesson-card__desc">Vom PRD zur Architektur: John schreibt die Anforderungen, Winston entwirft das Rückgrat – und ein Readiness-Check entscheidet, ob es weitergeht.</p>
+              <p class="lesson-card__meta">ca. 6 Minuten · Wissen &amp; Übung</p>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a class="lesson-card" href="lessons/0003-umsetzung-und-retro.html">
+            <span class="lesson-card__num">3</span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Umsetzung und Retro</span>
+              <p class="lesson-card__desc">Den Story-Zyklus verstehen: eine Story vollständig fertig, inklusive Code-Review, bevor die nächste beginnt – und die Retrospektive am Ende des Epics.</p>
+              <p class="lesson-card__meta">ca. 6 Minuten · Wissen &amp; Übung</p>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a class="lesson-card lesson-card--reference" href="reference/index.html">
+            <span class="lesson-card__num" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+            </span>
+            <span class="lesson-card__body">
+              <span class="lesson-card__title">Cheat-Sheet: Rollen &amp; Artefakte</span>
+              <p class="lesson-card__desc">Alle vier Phasen mit Rolle, <code>bmad-*</code>-Workflow und Artefakt in einer Tabelle – zum Nachschlagen und Ausdrucken.</p>
+              <p class="lesson-card__meta">Nachschlagewerk</p>
+            </span>
+          </a>
+        </li>
+
+      </ul>
+
+      <aside class="primary-source">
+        <p class="primary-source__label">Primärquelle</p>
+        <p>
+          Lies als Überblick:
+          <a href="https://docs.bmad-method.org/reference/workflow-map/">»Workflow-Map« (BMAD-Doku)</a>.
+          Die offizielle BMAD-METHOD ist die einzige Quelle der Wahrheit – wir zitieren sie in jeder Lektion.
+        </p>
+      </aside>
+
+      <aside class="ask-teacher">
+        <img class="ask-teacher__mark" src="assets/design-system/brand/via-mark.svg" alt="">
+        <div>
+          <h3>Etwas unklar?</h3>
+          <p>Öffne diesen Ordner in deiner Claude CLI und frag nach – wir gehen jeden Schritt gemeinsam durch, bis es sitzt.</p>
+        </div>
+      </aside>
+
+    </section>
+
+    <p class="lesson__brand">
+      <img src="assets/design-system/brand/atruvia-logo.svg" alt="Atruvia">
+      <span>Gestaltet im Atruvia Design System · Inhalte aus der öffentlichen BMAD-METHOD</span>
+    </p>
+
+  </main>
+
+</body>
+</html>
