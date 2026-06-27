@@ -4,7 +4,7 @@ Eine statisch ausgelieferte Website, die Entwickler\*innen bei Atruvia den Einst
 
 ## Status
 
-**Design und Plan abgeschlossen, Umsetzung folgt.** Dieses Repository enthält aktuell das Domänenmodell, die Architekturentscheidungen und den Bauplan. Die eigentlichen Seiten (Hub und vier Unterseiten) werden auf dieser Grundlage erstellt.
+**Gebaut und live.** Hub und vier Unterseiten sind erstellt, geprüft und über **GitHub Pages** unter <https://atruvia.github.io/techzone-onboarding/> veröffentlicht. Daneben enthält das Repository das Domänenmodell, die Architekturentscheidungen und den Bauplan, auf deren Grundlage die Seiten entstanden sind.
 
 ## Idee
 
@@ -19,7 +19,7 @@ Der Einstieg orientiert sich an der Frage »Wo stehst du gerade?«. Die Startsei
 
 Jede Unterseite unter `pages/<slug>/` ist ein in sich geschlossenes Ergebnis, erstellt mit dem Skill `/atruvia-teach`. Der Hub wird mit dem `/atruvia-design-system` gestaltet.
 
-## Struktur (Zielzustand)
+## Struktur
 
 ```
 techzone-onboarding/

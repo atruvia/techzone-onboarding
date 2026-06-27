@@ -61,9 +61,11 @@ Every Page: `index.html` topic landing (German; what the scenario is, when to us
 
 ## Definition of done
 
-- [ ] `https://atruvia.github.io/techzone-onboarding/` shows the Hub with a working 2×2 grid.
-- [ ] Each Card opens its Page; each Page has a working »Zurück zur Übersicht« back-link.
-- [ ] All four Pages: German content, ~2–3 lessons + 1 reference, every claim cites a BMAD source.
-- [ ] No root-absolute paths anywhere; site works under the `/techzone-onboarding/` subpath.
-- [ ] No installation instructions (environment is pre-provisioned); no emoji; brand voice consistent.
+**Status: met — 2026-06-27, live at <https://atruvia.github.io/techzone-onboarding/> (commit `8d2097f`).**
+
+- [x] `https://atruvia.github.io/techzone-onboarding/` shows the Hub with a working 2×2 grid.
+- [x] Each Card opens its Page; each Page has a working »Zurück zur Übersicht« back-link.
+- [x] All four Pages: German content, ~2–3 lessons + 1 reference, every claim cites a BMAD source.
+- [x] No root-absolute paths anywhere; site works under the `/techzone-onboarding/` subpath.
+- [x] No installation instructions (environment is pre-provisioned); no emoji; brand voice consistent.
 ```
