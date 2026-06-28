@@ -1,5 +1,7 @@
 # Hub and Pages use two different Atruvia design systems — one brand, two registers
 
+> **Status: superseded by [ADR-0004](0004-one-shared-self-hosted-assets-folder.md) (2026-06-28).** The "two design systems" framing is obsolete: the site now adopts a single vendored design system, and the Hub and Pages are two *register layers* on top of it. The conclusion that survives — keep the lobby/classroom distinction (two **registers**), guaranteed by shared tokens + the back-link — is restated in ADR-0004. The text below is kept as the historical record.
+
 The Hub is built with `/atruvia-design-system` (marketing/website components: `TopNav`, `Hero`, `Footer`, cards). The Pages are built with `/atruvia-teach`'s `lessons.css` (Tufte-style teaching components: callouts, primary-source boxes, quizzes). We deliberately keep both rather than forcing one.
 
 ## Context

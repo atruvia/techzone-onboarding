@@ -1,0 +1,150 @@
+/* ============================================================
+   Page chrome for the onboarding integration.
+   Sits on top of the classroom layer (lessons.css) + the
+   vendored design system. ONLY adds: the back-to-Hub top bar,
+   the landing's lesson list, and the cheat-sheet table.
+   Composes the new tokens — invents no colors/fonts/spacing.
+   ============================================================ */
+
+/* ---- Top bar: Atruvia wordmark + »Zurück zur Übersicht« ----- */
+.page-top {
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--surface-page);
+}
+.page-top__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.page-top__brand img { height: 24px; width: auto; display: block; }
+.page-top__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  color: var(--text-link);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.page-top__back:hover { color: var(--text-link-hover); }
+.page-top__back svg { width: 16px; height: 16px; flex: 0 0 auto; }
+
+/* ---- Landing: scenario intro + list of lessons ---- */
+.landing__meta {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.lesson-list {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.lesson-card {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  padding: var(--space-5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: var(--text-strong);
+  transition: border-color var(--duration-base) var(--ease-standard),
+              box-shadow var(--duration-base) var(--ease-standard);
+}
+.lesson-card:hover {
+  border-color: var(--border-brand);
+  box-shadow: var(--shadow-md);
+  color: var(--text-strong);
+}
+.lesson-card:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+.lesson-card__num {
+  flex: 0 0 auto;
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--text-link);
+  min-width: 2ch;
+}
+.lesson-card__num svg { width: 26px; height: 26px; display: block; }
+.lesson-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.lesson-card__title {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xl);
+  color: var(--text-strong);
+  margin: 0;
+}
+.lesson-card__desc { margin: 0; font-size: var(--text-md); color: var(--text-body); }
+.lesson-card__meta { margin: var(--space-1) 0 0; font-size: var(--text-xs); color: var(--text-muted); }
+
+/* The reference (cheat sheet) entry reads as the closing, summarising tile */
+.lesson-card--reference { background: var(--atr-blue-050); border-color: transparent; }
+.lesson-card--reference .lesson-card__num { color: var(--text-link); }
+
+@media (max-width: 520px) {
+  .lesson-card { gap: var(--space-4); padding: var(--space-4); }
+}
+
+/* ---- Cheat-sheet table (reference documents) ---- */
+.cheat-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-5) 0;
+  font-size: var(--text-sm);
+}
+.cheat-table caption {
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  color: var(--text-strong);
+  margin-bottom: var(--space-3);
+}
+.cheat-table th,
+.cheat-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.cheat-table thead th {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border-default);
+}
+.cheat-table td code { white-space: nowrap; }
+.cheat-table tbody tr:last-child td { border-bottom: 0; }
+
+/* Compact source list at the foot of a reference doc */
+.source-list { padding-left: var(--space-5); margin: var(--space-4) 0 0; }
+.source-list li { margin-bottom: var(--space-2); font-size: var(--text-sm); }
+
+@media (max-width: 560px) {
+  .cheat-table, .cheat-table thead, .cheat-table tbody,
+  .cheat-table tr, .cheat-table th, .cheat-table td { display: block; }
+  .cheat-table thead { display: none; }
+  .cheat-table tr { border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); margin-bottom: var(--space-3); padding: var(--space-2); }
+  .cheat-table td { border-bottom: 0; padding: var(--space-2) var(--space-3); }
+}

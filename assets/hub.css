@@ -1,16 +1,16 @@
 /* ============================================================
    Hub styles — the lobby that routes visitors to the four Pages.
-   Built ONLY from the tokens in colors_and_type.css.
-   Brand register: marketing/website (Atruvia design system).
+   The LOBBY register, layered on the vendored design system
+   (assets/design-system/styles.css). Composes the new tokens
+   only — invents no colors/fonts/spacing. Base element styling
+   (body, h1, a, .atr-eyebrow, .atr-via-line) comes from base.css.
    ============================================================ */
-
-*, *::before, *::after { box-sizing: border-box; }
 
 .hub {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--atr-white);
+  background: var(--surface-page);
 }
 
 /* ---- TopNav ------------------------------------------------ */
@@ -19,25 +19,25 @@
   align-items: center;
   gap: var(--space-4);
   padding: var(--space-5) var(--gutter);
-  background: var(--atr-white);
-  border-bottom: 1px solid var(--atr-line-soft);
+  background: var(--surface-page);
+  border-bottom: 1px solid var(--border-subtle);
   position: sticky;
   top: 0;
   z-index: 10;
 }
-.hub-nav__brand img { height: 32px; display: block; }
+.hub-nav__brand img { height: 30px; display: block; }
 .hub-nav__divider {
   width: 1px;
   height: 24px;
-  background: var(--atr-line);
+  background: var(--border-default);
 }
 .hub-nav__tag {
   font-family: var(--font-display);
   font-weight: var(--weight-medium);
-  font-size: var(--fs-sm);
+  font-size: var(--text-sm);
   letter-spacing: var(--tracking-caps);
   text-transform: uppercase;
-  color: var(--atr-ink-2);
+  color: var(--text-muted);
 }
 
 /* ---- Hero -------------------------------------------------- */
@@ -45,54 +45,58 @@
   text-align: center;
   max-width: 880px;
   margin: 0 auto;
-  padding: var(--space-9) var(--gutter) var(--space-7);
+  padding: var(--space-10) var(--gutter) var(--space-8);
 }
 .hub-hero__title {
-  font-family: var(--font-display);
-  font-weight: var(--weight-light);          /* CD: large titles are LIGHT 300 */
-  font-size: var(--fs-hero);
-  line-height: var(--lh-snug);
+  font-family: var(--role-display-font);
+  font-weight: var(--role-display-weight);     /* official: display is ExtraBold 800 */
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
-  color: var(--atr-navy);
+  color: var(--text-strong);
   margin: 0 0 var(--space-5);
   text-wrap: balance;
 }
 .hub-hero__lead {
-  font-size: var(--fs-lg);
-  line-height: var(--lh-base);
-  color: var(--atr-navy);
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
   max-width: 58ch;
   margin: 0 auto;
 }
+/* The VIA Line — official flat gradient bar (base.css .atr-via-line) */
 .hub-hero__via {
   display: block;
   width: 100%;
   max-width: 560px;
-  margin: var(--space-7) auto 0;
-  color: var(--atr-coral);                    /* VIA line is always coral */
+  margin: var(--space-8) auto 0;
 }
-.hub-hero__via svg { width: 100%; height: auto; display: block; }
+.hub-hero__via .atr-via-line {
+  transform-origin: center;
+  animation: hub-via-draw var(--duration-slower) var(--ease-out) 200ms both;
+}
+@keyframes hub-via-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 /* ---- Choose section + card grid ---------------------------- */
 .hub-main { flex: 1; }
 .hub-choose {
-  max-width: var(--content-max);
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--space-7) var(--gutter) var(--space-9);
+  padding: var(--space-8) var(--gutter) var(--space-10);
 }
 .hub-choose__title {
-  font-family: var(--font-display);
-  font-weight: var(--weight-bold);            /* section titles are BOLD 700 */
-  font-size: var(--fs-h2);
-  color: var(--atr-navy);
+  font-family: var(--role-heading-font);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-3xl);
+  color: var(--text-strong);
   text-align: center;
   margin: 0 0 var(--space-3);
 }
 .hub-choose__intro {
   text-align: center;
   max-width: 60ch;
-  margin: 0 auto var(--space-8);
-  color: var(--atr-ink);
+  margin: 0 auto var(--space-9);
+  color: var(--text-body);
 }
 
 .hub-grid {
@@ -110,46 +114,47 @@
   align-items: flex-start;
   gap: var(--space-3);
   padding: var(--space-6);
-  background: var(--atr-surface);
-  border: 1px solid var(--atr-line);
-  border-radius: var(--r-lg);
-  text-decoration: none;                      /* override default underlined link */
-  color: var(--atr-navy);
-  transition: border-color var(--dur-base) var(--ease),
-              box-shadow var(--dur-base) var(--ease);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  text-decoration: none;
+  color: var(--text-strong);
+  transition: border-color var(--duration-base) var(--ease-standard),
+              box-shadow var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
 }
 .hub-card:hover {
-  border-color: var(--atr-blue);
-  box-shadow: var(--shadow-soft);
-  color: var(--atr-navy);                     /* stay navy on hover, no link-blue */
+  border-color: var(--border-brand);
+  box-shadow: var(--shadow-md);
+  color: var(--text-strong);
 }
 .hub-card:focus-visible {
-  outline: 2px solid var(--atr-blue);
-  outline-offset: 3px;
+  outline: none;
+  box-shadow: var(--focus-ring);
 }
 .hub-card__icon {
   width: 56px;
   height: 56px;
-  border-radius: var(--r-md);
-  background: var(--atr-surface-cyan);        /* cyan-soft icon surface */
-  color: var(--atr-blue);                     /* icon glyph is blue */
+  border-radius: var(--radius-md);
+  background: var(--surface-brand-subtle);     /* aqua icon surface */
+  color: var(--atr-blue-500);                  /* glyph picks this up via currentColor */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: var(--space-2);
 }
-.hub-card__icon svg { width: 26px; height: 26px; stroke-width: 1.6; }
+.hub-card__icon svg { width: 28px; height: 28px; }
 .hub-card__title {
-  font-family: var(--font-display);
+  font-family: var(--role-heading-font);
   font-weight: var(--weight-bold);
-  font-size: var(--fs-h4);
-  color: var(--atr-navy);
+  font-size: var(--text-xl);
+  color: var(--text-strong);
   margin: 0;
 }
 .hub-card__desc {
-  font-size: var(--fs-base);
-  line-height: var(--lh-base);
-  color: var(--atr-ink);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--text-body);
   margin: 0;
 }
 .hub-card__more {
@@ -157,28 +162,28 @@
   padding-top: var(--space-3);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
   font-family: var(--font-display);
   font-weight: var(--weight-medium);
-  font-size: var(--fs-sm);
-  color: var(--atr-blue);
+  font-size: var(--text-sm);
+  color: var(--text-link);
 }
 .hub-card__more svg {
   width: 16px;
   height: 16px;
-  transition: transform var(--dur-base) var(--ease);
+  transition: transform var(--duration-base) var(--ease-standard);
 }
 .hub-card:hover .hub-card__more svg { transform: translateX(3px); }
 
 /* ---- Footer (navy) ----------------------------------------- */
 .hub-footer {
   margin-top: auto;
-  background: var(--atr-navy);
-  color: var(--atr-ink-inv);
-  padding: var(--space-8) var(--gutter) var(--space-5);
+  background: var(--surface-inverse);
+  color: var(--text-on-brand);
+  padding: var(--space-9) var(--gutter) var(--space-5);
 }
 .hub-footer__inner {
-  max-width: var(--content-max);
+  max-width: var(--container-max);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -187,12 +192,12 @@
   padding-bottom: var(--space-6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-.hub-footer__logo { height: 30px; filter: brightness(0) invert(1); }
+.hub-footer__logo { height: 28px; filter: brightness(0) invert(1); }
 .hub-footer__tag {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: var(--weight-regular);
-  font-size: var(--fs-base);
-  color: var(--atr-ink-inv);
+  font-size: var(--text-md);
+  color: var(--text-on-brand);
   opacity: 0.85;
   margin: 0;
 }
@@ -203,39 +208,31 @@
   gap: var(--space-5);
 }
 .hub-footer__links a {
-  font-family: var(--font-body);
-  font-size: var(--fs-sm);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
 }
-.hub-footer__links a:hover { color: var(--atr-cyan-soft); text-decoration: underline; }
+.hub-footer__links a:hover { color: var(--atr-aqua-100); text-decoration: underline; }
 .hub-footer__legal {
-  max-width: var(--content-max);
+  max-width: var(--container-max);
   margin: 0 auto;
   padding-top: var(--space-4);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-5);
-  font-size: var(--fs-xs);
+  font-size: var(--text-xs);
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ---- VIA line draws itself once on load -------------------- */
-.hub-hero__via path {
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-  animation: hub-via-draw var(--dur-line) var(--ease-out) 250ms forwards;
-}
-@keyframes hub-via-draw { to { stroke-dashoffset: 0; } }
-
 @media (prefers-reduced-motion: reduce) {
-  .hub-hero__via path { animation: none; stroke-dashoffset: 0; }
-  .hub-card__more svg { transition: none; }
+  .hub-hero__via .atr-via-line { animation: none; transform: none; }
+  .hub-card, .hub-card__more svg { transition: none; }
 }
 
 /* ---- Responsive -------------------------------------------- */
 @media (max-width: 760px) {
   .hub-grid { grid-template-columns: 1fr; }
-  .hub-hero { padding-top: var(--space-8); }
+  .hub-hero { padding-top: var(--space-9); }
   .hub-footer__links { margin-left: 0; }
 }

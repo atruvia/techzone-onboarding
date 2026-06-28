@@ -1,0 +1,296 @@
+/* ============================================================
+   teach — Lesson & reference stylesheet (CLASSROOM register)
+   Layered on the vendored design system. Every lesson and
+   reference links the vendored styles.css first, then THIS file:
+
+     <link rel="stylesheet" href="../../../assets/design-system/styles.css">
+     <link rel="stylesheet" href="../../../assets/lessons.css">
+
+   Composes the new tokens only (--atr-ink-900, --space-5,
+   --font-display, --radius-pill …). Never invents colors, fonts
+   or spacing. No emoji, no Unicode glyphs as icons.
+
+   CARVE-OUT (deliberate, see ADR-0004 / BUILD-PLAN Phase 2):
+   the teaching READING surface keeps its calm 720px measure,
+   generous air, and underlined body links — even though the
+   brand layer otherwise adopts the new system's defaults.
+   ============================================================ */
+
+/* ---- Reading surface: one generous, readable measure -------- */
+.lesson,
+.reference {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-9) var(--gutter) var(--space-10);
+  font-size: var(--text-lg);              /* 18px — comfortable long-form reading */
+  line-height: var(--leading-relaxed);
+}
+/* Carve-out: underline links inside reading copy (scannability) */
+.lesson__body a,
+.reference a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+/* ---- Header: eyebrow -> title -> lead, tied to mission ------ */
+.lesson__header { margin-bottom: var(--space-8); }
+
+.atr-hero {                                /* the lesson title (h1) */
+  font-family: var(--role-display-font);
+  font-weight: var(--role-display-weight); /* official display: ExtraBold 800 */
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-strong);
+  margin: 0 0 var(--space-5);
+  text-wrap: balance;
+}
+
+.lesson__eyebrow {            /* the mission tie-in / topic kicker */
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-link);
+  margin: 0 0 var(--space-3);
+}
+
+.lesson__lead {               /* one-sentence "why this lesson" */
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--text-body);
+  margin: 0 0 var(--space-5);
+  text-wrap: pretty;
+}
+
+.lesson__meta {               /* lesson number, est. time */
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.lesson__body > * + * { margin-top: var(--space-4); }
+.lesson__body h2 { margin-top: var(--space-8); }
+.lesson__body h3 { margin-top: var(--space-7); }
+
+/* ---- The VIA Line — labeled connector diagram (decorative) -- */
+.via-line {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: var(--space-9) auto;
+}
+.via-line--draw path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: via-draw var(--duration-slower) var(--ease-out) forwards;
+}
+@keyframes via-draw { to { stroke-dashoffset: 0; } }
+
+/* ---- Objectives — "Das kannst du danach" -------------------- */
+.objectives {
+  list-style: none;
+  margin: 0 0 var(--space-5);
+  padding: 0;
+}
+.objectives li {
+  position: relative;
+  padding-left: var(--space-5);
+  margin: 0 0 var(--space-3);
+  line-height: var(--leading-normal);
+}
+.objectives li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--atr-coral-500);   /* warm accent marker */
+  border-radius: var(--radius-xs);
+}
+
+/* ---- Callouts — key insight / note -------------------------- */
+.callout {
+  background: var(--surface-brand-subtle);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  margin: var(--space-5) 0;
+}
+.callout > :first-child { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }
+.callout__label {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-strong);
+  margin: 0 0 var(--space-2);
+}
+.callout--note {
+  background: var(--surface-sunken);
+  border: 1px solid var(--border-subtle);
+}
+
+/* ---- Primary source ----------------------------------------- */
+.primary-source {
+  background: var(--atr-blue-050);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
+}
+.primary-source__label {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-link);
+  margin: 0 0 var(--space-2);
+}
+.primary-source a { font-weight: var(--weight-medium); }
+
+/* ---- Citations ---------------------------------------------- */
+.cite {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+.cite a { text-decoration-thickness: 1px; }
+
+/* ---- Quiz — retrieval practice (see quiz.js) ---------------- */
+.quiz {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  margin: var(--space-6) 0;
+}
+.quiz__label {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-link);
+  margin: 0 0 var(--space-3);
+}
+.quiz__q {
+  font-weight: var(--weight-medium);
+  color: var(--text-strong);
+  margin: 0 0 var(--space-4);
+}
+.quiz__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.quiz__option {
+  font: inherit;
+  text-align: left;
+  color: var(--text-strong);
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-control);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard);
+}
+.quiz__option:hover { background: var(--atr-gray-050); }
+.quiz__option:disabled { cursor: default; }
+.quiz__option.is-correct {
+  border-color: var(--atr-success-500);
+  background: var(--atr-success-050);
+  color: var(--atr-success-600);
+  font-weight: var(--weight-medium);
+}
+.quiz__option.is-wrong {
+  border-color: var(--atr-error-500);
+  background: var(--atr-error-050);
+  color: var(--atr-error-600);
+}
+.quiz__feedback {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+.quiz__feedback[hidden] { display: none; }
+
+/* ---- Ask-your-teacher reminder ------------------------------ */
+.ask-teacher {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  background: var(--surface-inverse);
+  color: var(--text-on-brand);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  margin: var(--space-8) 0 0;
+}
+.ask-teacher__mark {           /* the Atruvia brand glyph, on navy */
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  color: var(--text-on-brand);   /* sprite glyph picks this up via currentColor */
+}
+.ask-teacher h2,
+.ask-teacher h3 { color: var(--text-on-brand); margin-top: 0; }
+.ask-teacher p { color: var(--text-on-brand); margin-bottom: 0; }
+.ask-teacher a { color: var(--text-on-brand); }
+
+/* ---- Buttons — navy pill primary, ghost outline ------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  line-height: 1;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard);
+}
+.btn--primary { background: var(--surface-inverse); color: var(--text-on-brand); }
+.btn--primary:hover { background: var(--atr-ink-800); color: var(--text-on-brand); }
+.btn--primary:active { transform: scale(0.96); }
+.btn--ghost { background: transparent; color: var(--text-strong); border-color: var(--atr-ink-900); }
+.btn--ghost:hover { background: var(--atr-gray-050); color: var(--text-strong); }
+
+/* ---- Footer navigation -------------------------------------- */
+.lesson__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-9);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-subtle);
+}
+.lesson__nav a { font-weight: var(--weight-medium); }
+
+.lesson__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  color: var(--text-subtle);
+  font-size: var(--text-xs);
+}
+.lesson__brand img { height: 16px; width: auto; }
+
+/* ---- Print -------------------------------------------------- */
+@media print {
+  html { font-size: 11pt; }
+  body { background: var(--surface-page); }
+  .lesson, .reference { max-width: none; padding: 0; }
+  .quiz__option { border-color: var(--border-default); }
+  .ask-teacher { background: var(--surface-page); color: var(--text-body); border: 1px solid var(--border-subtle); }
+  .ask-teacher__mark { color: var(--text-strong); }
+  .ask-teacher h2, .ask-teacher h3, .ask-teacher p, .ask-teacher a { color: var(--text-body); }
+  .btn, .quiz__feedback[hidden] { display: none; }
+  a { color: var(--text-body); }
+  .via-line--draw path { stroke-dashoffset: 0; animation: none; }
+}

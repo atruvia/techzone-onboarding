@@ -1,5 +1,7 @@
 # Each Page is a literally self-contained, frozen-but-resumable atruvia-teach workspace
 
+> **Status: partially superseded by [ADR-0004](0004-one-shared-self-hosted-assets-folder.md) (2026-06-28).** Decision **(1) literal self-containment via duplication is reversed** — the four per-Page asset copies collapse into one shared root `/assets/`, and a Page folder no longer works standalone if extracted. Decision **(2) frozen-but-resumable is retained** unchanged: each Page keeps its full teach scaffolding. The text below is kept as the historical record of why duplication was originally chosen.
+
 Each `pages/<name>/` is produced by one `/atruvia-teach` session and committed as static files. Two non-obvious choices fall out of this:
 
 1. **Literal self-containment via duplication.** Every Page bundles its *own* copy of the design system (CSS + Atruvia fonts) under `pages/<name>/assets/`. There is no shared root `/assets/`.

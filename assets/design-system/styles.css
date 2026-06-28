@@ -1,0 +1,23 @@
+/* ============================================================
+   ATRUVIA DESIGN SYSTEM — vendored entry (trimmed)
+   ------------------------------------------------------------
+   Curated mirror of github.com/atruvia/design-system — see
+   VENDOR.md. This is the upstream @import manifest with TWO
+   local adaptations:
+     1. fonts.css is imported from ./ (flattened), not ./fonts/.
+     2. the component-styles.css import is DROPPED — this static
+        site hand-authors its layers (hub.css / lessons.css /
+        page.css) and uses none of the React component styling.
+   Consumers link THIS file first, then the site's own layer.
+   ============================================================ */
+
+@import url("./fonts.css");
+
+@import url("./tokens/colors.css");
+@import url("./tokens/typography.css");
+@import url("./tokens/spacing.css");
+@import url("./tokens/radius.css");
+@import url("./tokens/shadows.css");
+@import url("./tokens/motion.css");
+
+@import url("./tokens/base.css");
