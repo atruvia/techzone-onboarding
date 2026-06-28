@@ -6,21 +6,42 @@
    Composes the new tokens — invents no colors/fonts/spacing.
    ============================================================ */
 
-/* ---- Top bar: Atruvia wordmark + »Zurück zur Übersicht« ----- */
+/* ---- Shared top bar (Hub + Pages): sticky Atruvia · TechZone identity
+   cluster on the left, Back-link (Pages) / empty (Hub) on the right.
+   See ADR-0007. ----------------------------------------------- */
 .page-top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   border-bottom: 1px solid var(--border-subtle);
-  background: var(--surface-page);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .page-top__inner {
   max-width: 960px;
   margin: 0 auto;
-  padding: var(--space-5) var(--gutter);
+  padding: var(--space-4) var(--gutter);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
 }
+.page-top__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
 .page-top__brand img { height: 24px; width: auto; display: block; }
+.page-top__divider { width: 1px; height: 22px; background: var(--border-default); }
+.page-top__tag {
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
 .page-top__back {
   display: inline-flex;
   align-items: center;

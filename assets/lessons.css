@@ -71,20 +71,13 @@
 .lesson__body h2 { margin-top: var(--space-8); }
 .lesson__body h3 { margin-top: var(--space-7); }
 
-/* ---- The VIA Line — labeled connector diagram (decorative) -- */
-.via-line {
-  display: block;
-  width: 100%;
+/* ---- The VIA Line — canonical connector from base.css (.atr-via-line).
+   Here we only set the reading-column rhythm around it. ---------- */
+.lesson .atr-via-line,
+.reference .atr-via-line {
   max-width: 600px;
-  height: auto;
-  margin: var(--space-9) auto;
+  margin-block: var(--space-9);
 }
-.via-line--draw path {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: via-draw var(--duration-slower) var(--ease-out) forwards;
-}
-@keyframes via-draw { to { stroke-dashoffset: 0; } }
 
 /* ---- Objectives — "Das kannst du danach" -------------------- */
 .objectives {
@@ -294,5 +287,5 @@
   .ask-teacher h2, .ask-teacher h3, .ask-teacher p, .ask-teacher a { color: var(--text-body); }
   .btn, .quiz__feedback[hidden] { display: none; }
   a { color: var(--text-body); }
-  .via-line--draw path { stroke-dashoffset: 0; animation: none; }
+  .atr-via-line--draw path { stroke-dashoffset: 0; animation: none; }
 }

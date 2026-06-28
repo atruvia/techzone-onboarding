@@ -7,6 +7,12 @@ system. Do not hand-edit it — change it only by re-vendoring (below).
 - **Vendored from commit:** `bed17cc` (2026-06-28, "chore: remove broken HTML-as-woff2 fonts from uploads/"; the real typeface landed upstream in `5cf2208`)
 - **Vendored on:** 2026-06-28
 
+> **2026-06-28 — via-line promotion:** `tokens/base.css` was re-vendored to carry
+> the canonical hand-drawn **`.atr-via-line`** connector and the renamed
+> **`.atr-via-rule`** (the former flat-bar `.atr-via-line`). See ADR-0006 —
+> re-vendored from design-system `5f8a909`; the full-mirror hash above bumps
+> on the next complete re-sync.
+
 ## What was copied
 
 | Upstream path | Here |

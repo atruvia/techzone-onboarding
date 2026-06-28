@@ -37,8 +37,12 @@ What one Page teaches — the visitor's situation, picked from the Hub under the
 
 _Avoid_: track, module, course, tab
 
+**Page header**:
+The shared, sticky chrome at the top of every page — Hub and Pages alike: a site-wide `Atruvia · TechZone` identity cluster on the left, and a right slot that holds the Back-link on a Page and nothing on the Hub. One shell, slot-swapped (see [ADR-0007](./docs/adr/0007-hub-and-lessons-share-one-chrome.md)).
+_Avoid_: navbar, hub-nav, page-top (the two pre-unification headers)
+
 **Back-link**:
-The consistent »Zurück zur Übersicht« navigation element on every Page header that returns the visitor to the Root index (Hub). The contract that makes Hub and Pages feel like one site.
+The consistent »Zurück zur Übersicht« navigation element in the Page header's right slot that returns the visitor to the Root index (Hub). Present on every Page, absent on the Hub. The contract that makes Hub and Pages feel like one site.
 
 **Card**:
 One of the four clickable tiles in the Hub's 2×2 grid. Each Card = an Atruvia sprite icon (`atruvia-icons.svg#icon-…`) + German title + one-line description, the whole tile linking to its Page (`pages/<slug>/`). One Card per Scenario.
@@ -59,6 +63,14 @@ _Avoid_: design kit, theme, branding (use "Design system" for the upstream sourc
 **Vendored mirror**:
 The curated copy of the Design system committed under `./assets/design-system/` — fonts, tokens, a trimmed `styles.css` manifest, and the brand SVGs the site actually uses. Treated read-only; a re-sync is a wholesale folder replace, recorded in `assets/design-system/VENDOR.md` (upstream commit + what was copied/trimmed).
 _Avoid_: copy, fork, local design system
+
+**Via-line**:
+The brand's signature *connector* — a single hand-drawn, self-drawing SVG line, painted with the VIA gradient (navy→blue→aqua), that links exactly two labeled terms (the Hub's *Technology ↔ Adoption* — a nod to the delivering team »Hub Technology Adoption«; a Lesson's *Aufgabe ↔ Umsetzung*). One canonical path shape, reused on the Hub and every Lesson with only the two labels swapped. Defined once in the Design system as `.atr-via-line` (see [ADR-0006](./docs/adr/0006-via-line-is-a-gradient-connector.md)).
+_Avoid_: swoosh, squiggle, coral line (coral is retired); flat bar (that is the Via-rule)
+
+**Via-rule**:
+The minimal VIA divider — a flat 4px gradient hairline (`.atr-via-rule`, formerly the misnamed `.atr-via-line`). A plain section divider that carries no labels; not a connector.
+_Avoid_: via-line (reserved for the hand-drawn connector)
 
 ## Conventions
 
