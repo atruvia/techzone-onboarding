@@ -17,7 +17,7 @@ Der Einstieg orientiert sich an der Frage »Wo stehst du gerade?«. Die Startsei
 | »Kleines Projekt« | Ein vollständiges Projekt: Planung, Umsetzung, Retro | `small-project` |
 | »Lernen mit dem KI-Tutor« | Ein einzelnes Thema tief lernen mit `/atruvia-teach` | `learning` |
 
-Jede Unterseite unter `pages/<slug>/` ist ein in sich geschlossenes Ergebnis, erstellt mit dem Skill `/atruvia-teach`. Der Hub wird mit dem `/atruvia-design-system` gestaltet.
+Jede Unterseite unter `pages/<slug>/` ist ein in sich geschlossenes Ergebnis, erstellt mit dem Skill `/atruvia-teach`. Hub und Unterseiten teilen sich **dieselbe Gestaltung** — eine gemeinsame, mitlaufende Kopfzeile (`Atruvia · TechZone`), dieselbe Typografie und die **VIA-Linie** als Marken-Konnektor — aufgebaut auf dem `/atruvia-teach`-Lesesystem und dem offiziellen Atruvia Design System (`/atruvia-design-system`).
 
 ## Struktur
 
@@ -25,7 +25,8 @@ Jede Unterseite unter `pages/<slug>/` ist ein in sich geschlossenes Ergebnis, er
 techzone-onboarding/
 ├── index.html          # Hub (Startseite, Root-Index)
 ├── .nojekyll
-├── assets/             # eigene Assets des Hubs
+├── assets/             # EINE gemeinsame Quelle: Design-System-Spiegel + CSS/JS (Hub + Unterseiten)
+│   └── design-system/  #   selbst gehosteter Spiegel des Atruvia Design Systems
 ├── pages/
 │   ├── innovate/       # je eine in sich geschlossene Unterseite
 │   ├── small-task/
@@ -36,6 +37,12 @@ techzone-onboarding/
     ├── BUILD-PLAN.md   # Dateibaum, Inhalts-Kontrakt, Bau-Reihenfolge
     └── adr/            # Architekturentscheidungen
 ```
+
+## Design & Technik
+
+- **Offizielles Atruvia Design System, selbst gehostet.** Eine kuratierte Kopie liegt unter `assets/design-system/` — VIAType-Schriften, Design-Tokens, Wortmarke und Icon-Sprite. **Keine externen Laufzeit-Aufrufe** (keine Google Fonts, kein Icon-CDN). Siehe [ADR-0004](./docs/adr/0004-one-shared-self-hosted-assets-folder.md) und [ADR-0005](./docs/adr/0005-zero-external-runtime-dependencies.md).
+- **Einheitliche Chrome.** Hub und Unterseiten teilen eine mitlaufende Kopfzeile (`Atruvia · TechZone`; »Zurück zur Übersicht« auf Unterseiten, keiner auf dem Hub) und dieselbe Typografie. Siehe [ADR-0007](./docs/adr/0007-hub-and-lessons-share-one-chrome.md).
+- **Die VIA-Linie** ist der handgezeichnete Marken-Konnektor mit Verlauf (navy → blau → aqua), der zwei Begriffe verbindet — eine kanonische Form aus dem Design System (`.atr-via-line`). Siehe [ADR-0006](./docs/adr/0006-via-line-is-a-gradient-connector.md).
 
 ## Hosting
 
