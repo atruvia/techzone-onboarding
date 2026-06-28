@@ -33,7 +33,7 @@
   white-space: nowrap;
 }
 .page-top__back:hover { color: var(--text-link-hover); }
-.page-top__back svg { width: 16px; height: 16px; flex: 0 0 auto; }
+.page-top__back svg { width: 16px; height: 16px; flex: 0 0 auto; fill: currentColor; }
 
 /* ---- Landing: scenario intro + list of lessons ---- */
 .landing__meta {
@@ -80,7 +80,7 @@
   color: var(--text-link);
   min-width: 2ch;
 }
-.lesson-card__num svg { width: 26px; height: 26px; display: block; }
+.lesson-card__num svg { width: 26px; height: 26px; display: block; fill: currentColor; }
 .lesson-card__body {
   display: flex;
   flex-direction: column;

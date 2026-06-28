@@ -25,9 +25,10 @@
   font-size: var(--text-lg);              /* 18px — comfortable long-form reading */
   line-height: var(--leading-relaxed);
 }
-/* Carve-out: underline links inside reading copy (scannability) */
-.lesson__body a,
-.reference a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+/* Carve-out: underline links inside reading copy (scannability) —
+   but never whole-tile card links or buttons */
+.lesson__body a:not(.lesson-card):not(.btn),
+.reference a:not(.lesson-card):not(.btn) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 
 /* ---- Header: eyebrow -> title -> lead, tied to mission ------ */
 .lesson__header { margin-bottom: var(--space-8); }
@@ -229,7 +230,8 @@
   flex: 0 0 auto;
   width: 28px;
   height: 28px;
-  color: var(--text-on-brand);   /* sprite glyph picks this up via currentColor */
+  color: var(--text-on-brand);
+  fill: currentColor;            /* sprite paths have no own fill — force white here */
 }
 .ask-teacher h2,
 .ask-teacher h3 { color: var(--text-on-brand); margin-top: 0; }

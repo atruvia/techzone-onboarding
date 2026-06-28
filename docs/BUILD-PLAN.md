@@ -38,17 +38,19 @@ techzone-onboarding/
 ## Build order (vertical slice — same shape as Phase 1)
 
 1. **Vendor** the curated mirror into `assets/design-system/` (+ `VENDOR.md`); trim `styles.css` to drop the `component-styles.css` import.
-2. **Hub slice** — rewrite `hub.css` onto the new tokens; swap logo→`atruvia-wordmark.svg`, favicon→`favicon.ico`, icons→sprite (`<use>`); delete the Lucide `<script>`. Prove the Hub renders (Display-800 titles, gradient VIA line, themed sprite glyphs).
+2. **Hub slice** — rewrite `hub.css` onto the new tokens; swap logo→`atruvia-wordmark.svg`, favicon→`favicon.ico`, icons→sprite (`<use>`); delete the Lucide `<script>`. Prove the Hub renders (Display-800 titles, hand-drawn coral VIA-line consistent with the lessons, themed sprite glyphs).
 3. **Page slice** — rewrite `lessons.css` + `page.css` onto the new tokens **with the reading carve-out** (720px measure, generous air, underlined body links); re-home the retired classes (`.atr-hero`, `.atr-eyebrow`, `.atr-lead`, `.on-navy`, …) into our layer; author the single new-token `lesson-template.html`. Prove `pages/innovate/` end-to-end (landing + lessons + reference + back-link + quiz).
 4. **Replicate** — re-point every `<link>`/`<img>`/`<use>` href in the other three Pages to the shared `/assets/` at correct depth; delete each Page's local `assets/` (incl. `DESIGN-SYSTEM.md`). Mechanical — the CSS is now shared and was byte-identical.
 5. **Global verify** against the four gates below.
 
 ## Definition of done (Phase 2 verification gates)
 
-- [ ] **No dead tokens** — grep finds zero old token names (`--atr-navy`, `--fs-*`, `--space-*`, `--r-*`, `--font-display`, `--atr-coral`, …) in any served CSS/HTML.
-- [ ] **Zero external loads** — grep for `https://` in served files returns **only** content citations (BMAD/GitHub); no font/script/stylesheet fetch (kills the Lucide CDN + Google-Fonts import).
-- [ ] **Paths resolve under the subpath** — every asset href is relative and correct at each depth (`assets/…` root, `../../assets/…` Page index, `../../../assets/…` lessons/reference); no root-absolute `/assets/`.
-- [ ] **Renders self-hosted** — under `python3 -m http.server`: VIAType fonts load, sprite icons theme via `currentColor`, Hub↔Page back-links work both ways, no 404s.
+**Status: met — 2026-06-28, live at <https://atruvia.github.io/techzone-onboarding/> (commit `142221e`).**
+
+- [x] **No dead tokens** — grep finds zero old token names (`--atr-navy`, `--fs-*`, `--space-*`, `--r-*`, `--font-display`, `--atr-coral`, …) in any served CSS/HTML.
+- [x] **Zero external loads** — grep for `https://` in served files returns **only** content citations (BMAD/GitHub); no font/script/stylesheet fetch (Lucide CDN + Google-Fonts import both gone).
+- [x] **Paths resolve under the subpath** — all 270 references relative and correct at each depth (`assets/…` root, `../../assets/…` Page index, `../../../assets/…` lessons/reference); no root-absolute `/assets/`; case-exact (Linux/Pages-safe).
+- [x] **Renders self-hosted** — VIAType fonts, the Atruvia sprite, wordmark and favicon all serve `200` (verified locally over `http.server` and live on Pages); no external calls.
 
 ---
 
