@@ -1,49 +1,48 @@
 /* ============================================================
    ATRUVIA — WEBFONTS (self-hosted)
    ------------------------------------------------------------
-   VENDORING DEVIATION (see VENDOR.md): the upstream design system
-   shipped BROKEN font files — every VIAType-*.woff2 was actually
-   an HTML page, not a font, so the browser fell back to a system
-   sans. We substitute the REAL Atruvia corporate typeface (4 real
-   weights, magic `wOF2`) recovered from this project's
-   pre-migration commit. The family name stays "ATRUVIA" so the
-   tokens in tokens/typography.css resolve unchanged.
+   The "ATRUVIA" corporate typeface, self-hosted from ./fonts/
+   (WOFF2). Vendored straight from atruvia/design-system — the only
+   adaptation is the path: upstream's url("../assets/fonts/…") is
+   flattened to url("fonts/…") because the woff2 files live in
+   ./fonts/ here, not ../assets/fonts/ (see VENDOR.md deviation 1).
 
-   Real cuts available: 300 / 400 / 500 / 700. The 600 (SemiBold)
-   and 800 (Display/ExtraBold) requests map to the real 700 Bold —
-   we have no real semibold/display file. "ATRUVIA Mono" is
-   intentionally NOT declared (no real mono file); --font-mono
-   falls back to ui-monospace.
+   The brand ships FOUR real weights — Light 300, Regular 400,
+   Medium 500, Bold 700. There is no separate SemiBold, Display or
+   Mono cut, so weight 600 and 800 map to the real Bold, and
+   monospace/data falls back to a system mono stack (see
+   --font-mono in tokens/typography.css). Tokens in
+   tokens/typography.css reference the "ATRUVIA" family.
    ============================================================ */
 
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 300; font-display: swap;
-  src: url("fonts/atruvia-light.woff2") format("woff2");
+  src: url("fonts/VIAType-Light.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 400; font-display: swap;
-  src: url("fonts/atruvia-regular.woff2") format("woff2");
+  src: url("fonts/VIAType-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 500; font-display: swap;
-  src: url("fonts/atruvia-medium.woff2") format("woff2");
+  src: url("fonts/VIAType-Medium.woff2") format("woff2");
 }
-/* 600 / 700 / 800 → real Bold (no semibold/display cut available) */
+/* No separate SemiBold/Display cut in the brand — 600 and 800 reuse Bold */
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 600; font-display: swap;
-  src: url("fonts/atruvia-bold.woff2") format("woff2");
+  src: url("fonts/VIAType-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 700; font-display: swap;
-  src: url("fonts/atruvia-bold.woff2") format("woff2");
+  src: url("fonts/VIAType-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 800; font-display: swap;
-  src: url("fonts/atruvia-bold.woff2") format("woff2");
+  src: url("fonts/VIAType-Bold.woff2") format("woff2");
 }

@@ -1,6 +1,6 @@
 # Zero external runtime dependencies — self-host fonts and the Atruvia icon sprite
 
-The site makes **no external runtime calls**. Two dependencies that previously hit the network are removed: the Google-Fonts `@import` (Manrope + JetBrains Mono) in the old `colors_and_type.css`, and the Lucide CDN `<script>` on the Hub. Fonts are now the self-hosted VIAType woff2 files (`ATRUVIA` / `ATRUVIA Mono`) shipped by the vendored design system. Icons are now the self-hosted official Atruvia sprite (`assets/design-system/brand/atruvia-icons.svg`), referenced via `<svg><use href="…#icon-…">` with color set through `currentColor`.
+The site makes **no external runtime calls**. Two dependencies that previously hit the network are removed: the Google-Fonts `@import` (Manrope + JetBrains Mono) in the old `colors_and_type.css`, and the Lucide CDN `<script>` on the Hub. Fonts are now the self-hosted VIAType woff2 files (the `ATRUVIA` family) shipped by the vendored design system. Icons are now the self-hosted official Atruvia sprite (`assets/design-system/brand/atruvia-icons.svg`), referenced via `<svg><use href="…#icon-…">` with color set through `currentColor`.
 
 ## Context
 

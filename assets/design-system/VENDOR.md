@@ -4,15 +4,15 @@ This folder is a **curated, read-only mirror** of the upstream Atruvia design
 system. Do not hand-edit it — change it only by re-vendoring (below).
 
 - **Upstream:** `github.com/atruvia/design-system`
-- **Vendored from commit:** `e387596` (2026-06-28, "docs: align README intro with German repo description")
+- **Vendored from commit:** `bed17cc` (2026-06-28, "chore: remove broken HTML-as-woff2 fonts from uploads/"; the real typeface landed upstream in `5cf2208`)
 - **Vendored on:** 2026-06-28
 
 ## What was copied
 
 | Upstream path | Here |
 |---|---|
-| `fonts/fonts.css` | `fonts.css` (rewritten — see deviation 3) |
-| ~~`assets/fonts/VIAType-*.woff2`~~ (BROKEN upstream) | **not used** — see deviation 3 |
+| `fonts/fonts.css` | `fonts.css` (path-flattened — see deviation 1) |
+| `assets/fonts/VIAType-{Light,Regular,Medium,Bold}.woff2` | `fonts/VIAType-*.woff2` (4 real cuts) |
 | `tokens/{colors,typography,spacing,radius,shadows,motion,base}.css` | `tokens/` |
 | `assets/logos/atruvia-wordmark.svg` | `brand/atruvia-wordmark.svg` |
 | `assets/icons/atruvia-icons.svg` | `brand/atruvia-icons.svg` |
@@ -27,16 +27,21 @@ system. Do not hand-edit it — change it only by re-vendoring (below).
    **drops** the `components/component-styles.css` import — this site uses none of
    the upstream React component styling; it hand-authors `hub.css` / `lessons.css`
    / `page.css` on top of the tokens.
-3. **Fonts substituted — upstream fonts are BROKEN.** Every upstream
-   `assets/fonts/VIAType-*.woff2` (and the `uploads/` hashed copies) is actually
-   an **HTML page**, not a font (magic bytes `<!D…`, ~58 KB, `lang="de-DE"`), so a
-   browser silently falls back to a system sans. We instead ship the **real Atruvia
-   corporate typeface** — `fonts/atruvia-{light,regular,medium,bold}.woff2` (real
-   `wOF2`, 300/400/500/700) recovered from this project's pre-migration commit
-   `142221e^` — and rewrote `fonts.css` to map family `"ATRUVIA"` to them
-   (600/800 → real Bold; no `"ATRUVIA Mono"`, so `--font-mono` → ui-monospace).
-   **On re-sync: do NOT re-copy the upstream woff2 until upstream ships real fonts;
-   verify `head -c4` is `wOF2`, not `<!D`.**
+
+## Resolved — the former font substitution
+
+Earlier mirrors carried a third deviation: upstream had shipped **broken** font
+files (every `assets/fonts/VIAType-*.woff2` was actually an HTML page, magic
+`<!D…`), so this mirror substituted real fonts — renamed `atruvia-*.woff2` —
+recovered from a pre-migration commit. Upstream fixed this at the source in
+`5cf2208`, so the fonts are now vendored **straight from upstream** with their
+original `VIAType-*` filenames — no substitution, no rename. The four files are
+byte-identical to upstream (verified `sha256` match). The brand ships **four
+real weights** (300/400/500/700); weight 600 and 800 reuse the real Bold, and
+there is no brand mono, so `--font-mono` falls back to a system mono stack.
+
+**On re-sync, still verify** each woff2 is a real font: `head -c4` must be
+`wOF2`, not `<!D`.
 
 ## Deliberately NOT vendored
 

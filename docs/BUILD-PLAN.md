@@ -18,7 +18,7 @@ techzone-onboarding/
 │   ├── design-system/               # VENDORED mirror (read-only) of atruvia/design-system
 │   │   ├── VENDOR.md                #   upstream commit + what was copied/trimmed
 │   │   ├── styles.css               #   trimmed manifest: fonts + tokens + base (NO component-styles)
-│   │   ├── fonts.css · fonts/VIAType-*.woff2   (7 cuts)
+│   │   ├── fonts.css · fonts/VIAType-*.woff2   (4 real cuts)
 │   │   ├── tokens/{colors,typography,spacing,radius,shadows,motion,base}.css
 │   │   └── brand/{atruvia-wordmark.svg, atruvia-icons.svg, favicon.ico}
 │   ├── hub.css                      # OUR layer — Hub, on new tokens
