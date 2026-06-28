@@ -1,50 +1,49 @@
 /* ============================================================
    ATRUVIA — WEBFONTS (self-hosted)
    ------------------------------------------------------------
-   ✅ OFFICIAL FACE. "ATRUVIA" — Atruvia's custom corporate
-   typeface — is now self-hosted from assets/fonts/ (WOFF2).
-   The display weight (800) maps to the dedicated VIA Type
-   Display cut; "ATRUVIA Mono" covers monospace/data.
-   Tokens in tokens/typography.css reference these family names.
+   VENDORING DEVIATION (see VENDOR.md): the upstream design system
+   shipped BROKEN font files — every VIAType-*.woff2 was actually
+   an HTML page, not a font, so the browser fell back to a system
+   sans. We substitute the REAL Atruvia corporate typeface (4 real
+   weights, magic `wOF2`) recovered from this project's
+   pre-migration commit. The family name stays "ATRUVIA" so the
+   tokens in tokens/typography.css resolve unchanged.
+
+   Real cuts available: 300 / 400 / 500 / 700. The 600 (SemiBold)
+   and 800 (Display/ExtraBold) requests map to the real 700 Bold —
+   we have no real semibold/display file. "ATRUVIA Mono" is
+   intentionally NOT declared (no real mono file); --font-mono
+   falls back to ui-monospace.
    ============================================================ */
 
-/* ---- VIA Type (text) ------------------------------------- */
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 300; font-display: swap;
-  src: url("fonts/VIAType-Light.woff2") format("woff2");
+  src: url("fonts/atruvia-light.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 400; font-display: swap;
-  src: url("fonts/VIAType-Regular.woff2") format("woff2");
+  src: url("fonts/atruvia-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 500; font-display: swap;
-  src: url("fonts/VIAType-Medium.woff2") format("woff2");
+  src: url("fonts/atruvia-medium.woff2") format("woff2");
 }
+/* 600 / 700 / 800 → real Bold (no semibold/display cut available) */
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 600; font-display: swap;
-  src: url("fonts/VIAType-SemiBold.woff2") format("woff2");
+  src: url("fonts/atruvia-bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 700; font-display: swap;
-  src: url("fonts/VIAType-Bold.woff2") format("woff2");
+  src: url("fonts/atruvia-bold.woff2") format("woff2");
 }
-
-/* ---- VIA Type Display (headline cut) → weight 800 -------- */
 @font-face {
   font-family: "ATRUVIA";
   font-style: normal; font-weight: 800; font-display: swap;
-  src: url("fonts/VIAType-Display.woff2") format("woff2");
-}
-
-/* ---- VIA Type Mono (data / code) ------------------------- */
-@font-face {
-  font-family: "ATRUVIA Mono";
-  font-style: normal; font-weight: 400; font-display: swap;
-  src: url("fonts/VIAType-Mono.woff2") format("woff2");
+  src: url("fonts/atruvia-bold.woff2") format("woff2");
 }
