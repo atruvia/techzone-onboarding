@@ -152,7 +152,7 @@
    robot 170), so equal svg sizes look unequal. Size each box so the visible
    glyph lands at ~24px for all four. */
 .hub-card__icon:has(use[href$="#icon-idea"])   svg { width: 34px; height: 34px; }
-.hub-card__icon:has(use[href$="#icon-edit"])   svg { width: 25px; height: 25px; }
+.hub-card__icon:has(use[href$="#icon-bolt-circle"]) svg { width: 26px; height: 26px; }
 .hub-card__icon:has(use[href$="#icon-routes"]) svg { width: 26px; height: 26px; }
 .hub-card__icon:has(use[href$="#icon-robot"])  svg { width: 28px; height: 28px; }
 .hub-card__title {
