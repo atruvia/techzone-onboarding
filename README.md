@@ -60,4 +60,4 @@ Alle nutzerseitigen Inhalte sind **ausschließlich auf Deutsch** (plural »Wir«
 
 ## Lizenz
 
-[MIT](./LICENSE) © 2026 Atruvia AG
+Proprietär · © 2026 Atruvia AG. **Kein Open Source** — Nutzung ausschließlich durch autorisierte Atruvia-Nutzer*innen für Atruvia-Zwecke. Siehe [LICENSE](./LICENSE).
