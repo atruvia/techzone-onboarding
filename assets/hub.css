@@ -147,6 +147,14 @@
   margin-bottom: var(--space-2);
 }
 .hub-card__icon svg { width: 28px; height: 28px; fill: currentColor; }
+/* Optical size normalization: the sprite symbols fill their 200×200 box by
+   different amounts (measured content extents — idea 140, edit 190, routes 186,
+   robot 170), so equal svg sizes look unequal. Size each box so the visible
+   glyph lands at ~24px for all four. */
+.hub-card__icon:has(use[href$="#icon-idea"])   svg { width: 34px; height: 34px; }
+.hub-card__icon:has(use[href$="#icon-edit"])   svg { width: 25px; height: 25px; }
+.hub-card__icon:has(use[href$="#icon-routes"]) svg { width: 26px; height: 26px; }
+.hub-card__icon:has(use[href$="#icon-robot"])  svg { width: 28px; height: 28px; }
 .hub-card__title {
   font-family: var(--role-heading-font);
   font-weight: var(--weight-bold);
